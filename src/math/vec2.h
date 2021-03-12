@@ -14,9 +14,8 @@ class Vec2 {
 
   ~Vec2() = default;
 
-  void operator=(const Vec2 &);
-  bool operator==(const Vec2 &);
-  bool operator!=(const Vec2 &);
+  bool operator==(const Vec2 &) const;
+  bool operator!=(const Vec2 &) const;
 
   Vec2 operator+(const Vec2 &) const;
   Vec2 operator-(const Vec2 &) const;
@@ -25,6 +24,7 @@ class Vec2 {
   Vec2 operator*(float) const;  // multiplication with number
   Vec2 operator/(float) const;
 
+  void operator=(const Vec2 &);
   Vec2& operator+=(const Vec2 &);
   Vec2& operator-=(const Vec2 &);
   Vec2& operator*=(const Vec2 &);

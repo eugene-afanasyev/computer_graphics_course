@@ -56,9 +56,38 @@ TEST_CASE("Vec2 copy and move constructors") {
   }
 
   {
-    Vec2 vec(Vec2(1.14f, 3.28f));
+    Vec2 vec(std::move(Vec2(1.14f, 3.28f)));
 
     REQUIRE(floatCmp(vec.x, 1.14f));
     REQUIRE(floatCmp(vec.y, 3.28f));
+  }
+}
+
+TEST_CASE("Vec2 comparison") {
+  {
+    Vec2 vec_0(1.14f, 3.14f);
+    Vec2 vec_1(1.14f, 3.14f);
+
+    REQUIRE(vec_0 == vec_1);
+  }
+
+  {
+    REQUIRE(Vec2(1.1f) == Vec2(1.1f));
+    REQUIRE(Vec2() == Vec2());
+    REQUIRE(Vec2(0.0f) == Vec2(0.0f));
+    REQUIRE(Vec2(1.21f, 14.4f) == Vec2(1.21f, 14.4f));
+  }
+
+  {
+    Vec2 vec_0(1.14f, 3.14f);
+    Vec2 vec_1(1.14f, 3.13f);
+
+    REQUIRE(vec_0 != vec_1);
+  }
+
+  {
+    REQUIRE(Vec2(33333.3f) != Vec2(1.1f));
+    REQUIRE(Vec2() != Vec2(1.1f));
+    REQUIRE(Vec2(11.21f, 14.4f) != Vec2(33.1f, 50.2f));
   }
 }

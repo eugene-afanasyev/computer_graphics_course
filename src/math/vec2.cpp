@@ -15,3 +15,11 @@ Vec2::Vec2(Vec2 &&src) {
   x = src.x;
   y = src.y;
 }
+
+bool Vec2::operator==(const Vec2 &src) const {
+  return x == src.x && y == src.y;
+}
+
+bool Vec2::operator!=(const Vec2 &src) const {
+  return !(*this == src);
+}
