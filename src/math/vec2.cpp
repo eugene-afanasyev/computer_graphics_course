@@ -36,3 +36,7 @@ Vec2 Vec2::operator-(const Vec2 &src) const {
 float Vec2::length() const {
   return sqrtf(powf(x, 2) + powf(y, 2));
 }
+
+float Vec2::operator*(const Vec2 &src) const {
+  return x * src.x + y * src.y;
+}

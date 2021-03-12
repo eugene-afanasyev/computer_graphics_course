@@ -6,6 +6,7 @@
 #include "../src/math/vec2.h"
 
 #include <cmath>
+#include <glm/geometric.hpp>
 #include <glm/ext/vector_float2.hpp>
 
 bool floatCmp(float a, float b) {
@@ -135,5 +136,15 @@ TEST_CASE("Vec2 addition and subtraction") {
 
     REQUIRE(glm_result_vec.x == custom_result_vec.x);
     REQUIRE(glm_result_vec.y == custom_result_vec.y);
+  }
+}
+
+TEST_CASE("Vec2 scalar multiplication") {
+  {
+    Vec2 custom_vec1(11.1f, 32.2f);
+    Vec2 custom_vec2(9.20f, 510.2f);
+
+    float custom_cross_result = custom_vec1 * custom_vec2;
+    REQUIRE(floatCmp(custom_cross_result, 16530.56f));
   }
 }
