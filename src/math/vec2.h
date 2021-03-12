@@ -6,8 +6,8 @@
 class Vec2 {
  public:
   Vec2();
-  explicit Vec2(float);
-  Vec2(float, float);
+  explicit Vec2(float value);
+  Vec2(float x, float y);
 
   Vec2(const Vec2&);
   Vec2(Vec2 &&);
@@ -19,7 +19,6 @@ class Vec2 {
 
   Vec2 operator+(const Vec2 &) const;
   Vec2 operator-(const Vec2 &) const;
-  Vec2 operator*(const Vec2 &) const;  // scalar multiplication
 
   Vec2 operator*(float) const;  // multiplication with number
   Vec2 operator/(float) const;
@@ -27,12 +26,13 @@ class Vec2 {
   void operator=(const Vec2 &);
   Vec2& operator+=(const Vec2 &);
   Vec2& operator-=(const Vec2 &);
-  Vec2& operator*=(const Vec2 &);
 
   Vec2& operator*=(float);
   Vec2& operator/=(float);
 
   float length() const;
+  float operator*(const Vec2 &) const;  // scalar multiplication
+  Vec2& operator*=(const Vec2 &);
 
   Vec2 Normalize() const;
 

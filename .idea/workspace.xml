@@ -110,7 +110,7 @@
       <workItem from="1614916440073" duration="31000" />
       <workItem from="1614995776210" duration="8845000" />
       <workItem from="1615466724445" duration="6387000" />
-      <workItem from="1615551107047" duration="6046000" />
+      <workItem from="1615551107047" duration="7635000" />
     </task>
     <task id="LOCAL-00001" summary="Vec2 constructors realised and covered with tests">
       <created>1615556676953</created>
@@ -126,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615557033561</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Vec2 comparison methods implemented and covered with tests">
+      <created>1615557764489</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1615557764489</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,9 +153,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Vec2 constructors realised and covered with tests" />
     <MESSAGE value="Vec2 copy and move constructors realised and covered with tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vec2 copy and move constructors realised and covered with tests" />
+    <MESSAGE value="Vec2 comparison methods implemented and covered with tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vec2 comparison methods implemented and covered with tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615557572669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615559230556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
