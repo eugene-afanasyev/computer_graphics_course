@@ -6,15 +6,17 @@
 class Vec2 {
  public:
   Vec2();
-  Vec2(float);
+  explicit Vec2(float);
   Vec2(float, float);
 
   Vec2(const Vec2&);
   Vec2(Vec2 &&);
 
-  ~Vec2();
+  ~Vec2() = default;
 
   void operator=(const Vec2 &);
+  bool operator==(const Vec2 &);
+  bool operator!=(const Vec2 &);
 
   Vec2 operator+(const Vec2 &) const;
   Vec2 operator-(const Vec2 &) const;
@@ -34,8 +36,7 @@ class Vec2 {
 
   Vec2 Normalize() const;
 
- private:
-  std::unique_ptr<float> elements_;
+  float x, y;
 };
 
 #endif  //COMPUTER_GRAPHICS_COURSE_SRC_MATH_VEC2_H_
