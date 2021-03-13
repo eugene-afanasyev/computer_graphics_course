@@ -7,6 +7,7 @@
 
 #include <cmath>
 #include <glm/geometric.hpp>
+#include <glm/ext.hpp>
 #include <glm/ext/vector_float2.hpp>
 
 bool floatCmp(float a, float b) {
@@ -168,5 +169,37 @@ TEST_CASE("Vec2 multiplication and div on number") {
 
     REQUIRE(floatCmp(glm_vec.x, custom_vec.x));
     REQUIRE(floatCmp(glm_vec.y, custom_vec.y));
+  }
+}
+
+TEST_CASE("Vec2 normalization") {
+  {
+    glm::vec2 glm_vec(12.4f, 32.1f);
+    Vec2 custom_vec(12.4f, 32.1f);
+
+    glm_vec = glm::normalize(glm_vec);
+
+    REQUIRE(floatCmp(glm_vec.x, custom_vec.normalize().x));
+    REQUIRE(floatCmp(glm_vec.y, custom_vec.normalize().y));
+  }
+
+  {
+    glm::vec2 glm_vec(134.443f);
+    Vec2 custom_vec(134.443f);
+
+    glm_vec = glm::normalize(glm_vec);
+
+    REQUIRE(floatCmp(glm_vec.x, custom_vec.normalize().x));
+    REQUIRE(floatCmp(glm_vec.y, custom_vec.normalize().y));
+  }
+
+  {
+    glm::vec2 glm_vec(0.0f, 0.01f);
+    Vec2 custom_vec(0.0f, 0.01f);
+
+    glm_vec = glm::normalize(glm_vec);
+
+    REQUIRE(floatCmp(glm_vec.x, custom_vec.normalize().x));
+    REQUIRE(floatCmp(glm_vec.y, custom_vec.normalize().y));
   }
 }
