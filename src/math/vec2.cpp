@@ -1,5 +1,5 @@
 #include <cmath>
-#include "vec2.h"
+#include "vec2.hpp"
 
 Vec2::Vec2() : x(0.0f), y(0.0f) {}
 

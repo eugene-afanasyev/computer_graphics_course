@@ -3,7 +3,8 @@
 #define EPSILON 1e-5
 
 #include "catch.hpp"
-#include "../src/math/vec2.h"
+#include "../src/math/vec2.hpp"
+#include "../src/math/vec3.hpp"
 
 #include <cmath>
 #include <glm/geometric.hpp>
@@ -249,5 +250,50 @@ TEST_CASE("Vec2 normalization") {
 
     REQUIRE(floatCmp(glm_vec.x, custom_vec.normalize().x));
     REQUIRE(floatCmp(glm_vec.y, custom_vec.normalize().y));
+  }
+}
+
+/* Vec3 TEST_CASE block */
+
+TEST_CASE("Vec3 init") {
+  {
+    Vec3 vec;
+    REQUIRE(vec.x == 0);
+    REQUIRE(vec.y == 0);
+    REQUIRE(vec.z == 0);
+  }
+
+  {
+    Vec3 vec(3.14f);
+    REQUIRE(vec.x == 3.14f);
+    REQUIRE(vec.y == 3.14f);
+    REQUIRE(vec.z == 3.14f);
+  }
+
+  {
+    Vec3 vec(3.14f, 1.77f, 0.42f);
+    REQUIRE(vec.x == 3.14f);
+    REQUIRE(vec.y == 1.77f);
+    REQUIRE(vec.z == 0.42f);
+  }
+}
+
+TEST_CASE("Vec3 copy and move constructor") {
+  {
+    Vec3 src(3.14f, 1.77f, 0.42f);
+    Vec3 dst(src);
+
+    REQUIRE(src.x == dst.x);
+    REQUIRE(src.y == dst.y);
+    REQUIRE(src.z == dst.z);
+  }
+
+  {
+    Vec3 src(3.14f, 1.77f, 0.42f);
+    Vec3 dst(std::move(src));
+
+    REQUIRE(src.x == dst.x);
+    REQUIRE(src.y == dst.y);
+    REQUIRE(src.z == dst.z);
   }
 }
