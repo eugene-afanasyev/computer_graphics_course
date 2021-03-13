@@ -12,7 +12,7 @@ Vec2::Vec2(const Vec2 &src) {
   y = src.y;
 }
 
-Vec2::Vec2(Vec2 &&src) {
+Vec2::Vec2(Vec2 &&src)  noexcept {
   x = src.x;
   y = src.y;
 }
@@ -42,14 +42,40 @@ float Vec2::operator*(const Vec2 &src) const {
 }
 
 Vec2 Vec2::operator*(float value) const {
-  return Vec2(x * value, y * value);
+  return {x * value, y * value};
 }
 
 Vec2 Vec2::operator/(float value) const {
-  return Vec2(x / value, y / value);
+  return {x / value, y / value};
 }
 
-Vec2& Vec2::operator=(const Vec2 &src) {
-  x = src.x;
-  y = src.y;
+Vec2& Vec2::operator=(const Vec2 &src) = default;
+
+Vec2 &Vec2::operator+=(const Vec2 &src) {
+  x += src.x;
+  y += src.y;
+  return *this;
+}
+
+Vec2 &Vec2::operator-=(const Vec2 &src) {
+  x -= src.x;
+  y -= src.y;
+  return *this;
+}
+
+Vec2 &Vec2::operator*=(float value) {
+  x *= value;
+  y *= value;
+  return *this;
+}
+
+Vec2 &Vec2::operator/=(float value) {
+  x /= value;
+  y /= value;
+  return *this;
+}
+
+Vec2 Vec2::normalize() const {
+  float inv_length = 1.0f / length();
+  return Vec2(*this) * inv_length;
 }

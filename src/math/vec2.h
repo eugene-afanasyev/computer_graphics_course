@@ -10,7 +10,7 @@ class Vec2 {
   Vec2(float x, float y);
 
   Vec2(const Vec2&);
-  Vec2(Vec2 &&);
+  Vec2(Vec2 &&) noexcept;
 
   ~Vec2() = default;
 
@@ -32,9 +32,8 @@ class Vec2 {
 
   float length() const;
   float operator*(const Vec2 &) const;  // scalar multiplication
-  Vec2& operator*=(const Vec2 &);
 
-  Vec2 Normalize() const;
+  Vec2 normalize() const;
 
   float x, y;
 };

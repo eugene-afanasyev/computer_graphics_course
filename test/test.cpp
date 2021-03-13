@@ -158,4 +158,15 @@ TEST_CASE("Vec2 multiplication and div on number") {
     REQUIRE(floatCmp(glm_vec.x, custom_vec.x));
     REQUIRE(floatCmp(glm_vec.y, custom_vec.y));
   }
+
+  {
+    glm::vec2 glm_vec(12.4f, 32.1f);
+    Vec2 custom_vec(12.4f, 32.1f);
+
+    glm_vec = glm::operator/(glm_vec, {2});
+    custom_vec = custom_vec / 2;
+
+    REQUIRE(floatCmp(glm_vec.x, custom_vec.x));
+    REQUIRE(floatCmp(glm_vec.y, custom_vec.y));
+  }
 }
