@@ -13,7 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/math/vec2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/vec2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math/vec3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/vec3.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.cpp" afterDir="false" />
     </list>
@@ -71,11 +71,6 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.computer_graphics_course">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Pattern" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="computer_graphics_course" TARGET_NAME="computer_graphics_course" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="computer_graphics_course" RUN_TARGET_NAME="computer_graphics_course" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -113,7 +108,8 @@
       <workItem from="1615466724445" duration="6387000" />
       <workItem from="1615551107047" duration="8915000" />
       <workItem from="1615596821070" duration="4368000" />
-      <workItem from="1615623864152" duration="1881000" />
+      <workItem from="1615623864152" duration="2192000" />
+      <workItem from="1615628467040" duration="1058000" />
     </task>
     <task id="LOCAL-00001" summary="Vec2 constructors realised and covered with tests">
       <created>1615556676953</created>
@@ -192,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615625310168</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="some tests fixes, Vec3 comparison implemented and covered with tests">
+      <created>1615626051379</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1615626051379</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,10 +224,10 @@
     <MESSAGE value="Vec2 assignment multiplication and division covered with tests" />
     <MESSAGE value="Vec3 init, copy and move constructors implemented and covered with tests" />
     <MESSAGE value="fixed Vec3 move ctr tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed Vec3 move ctr tests" />
+    <MESSAGE value="some tests fixes, Vec3 comparison implemented and covered with tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="some tests fixes, Vec3 comparison implemented and covered with tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615625191091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

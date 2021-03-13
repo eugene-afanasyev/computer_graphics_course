@@ -320,3 +320,35 @@ TEST_CASE("Vec3 comparison") {
     REQUIRE(Vec3(3.14f, 1.77000f, 0.42f) != Vec3(3.14f, 1.77f, 0.4212f));
   }
 }
+
+TEST_CASE("Vec3 sum and subtraction") {
+  {
+    glm::vec3 glm_vec0(3.14f, 1.77000f, 0.42f);
+    glm::vec3 glm_vec1(33.4f, 4.4f, 31.2f);
+
+    Vec3 custom_vec0(3.14f, 1.77000f, 0.42f);
+    Vec3 custom_vec1(33.4f, 4.4f, 31.2f);
+
+    glm::vec3 glm_result_vec = glm_vec0 + glm_vec1;
+    Vec3 custom_vec_result = custom_vec0 + custom_vec1;
+
+    REQUIRE(glm_result_vec.x == custom_vec_result.x);
+    REQUIRE(glm_result_vec.y == custom_vec_result.y);
+    REQUIRE(glm_result_vec.z == custom_vec_result.z);
+  }
+
+  {
+    glm::vec3 glm_vec0(43.14f, 1.20f, 11.42f);
+    glm::vec3 glm_vec1(3223.4f, 4442.24f, 213.24f);
+
+    Vec3 custom_vec0(43.14f, 1.20f, 11.42f);
+    Vec3 custom_vec1(3223.4f, 4442.24f, 213.24f);
+
+    glm::vec3 glm_result_vec = glm_vec0 - glm_vec1;
+    Vec3 custom_vec_result = custom_vec0 - custom_vec1;
+
+    REQUIRE(glm_result_vec.x == custom_vec_result.x);
+    REQUIRE(glm_result_vec.y == custom_vec_result.y);
+    REQUIRE(glm_result_vec.z == custom_vec_result.z);
+  }
+}
