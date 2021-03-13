@@ -292,8 +292,8 @@ TEST_CASE("Vec3 copy and move constructor") {
     Vec3 src(3.14f, 1.77f, 0.42f);
     Vec3 dst(std::move(src));
 
-    REQUIRE(src.x == dst.x);
-    REQUIRE(src.y == dst.y);
-    REQUIRE(src.z == dst.z);
+    REQUIRE(3.14f == dst.x);
+    REQUIRE(1.77f == dst.y);
+    REQUIRE(0.42f == dst.z);
   }
 }
