@@ -156,8 +156,32 @@ TEST_CASE("Vec2 assignment addition and subtraction") {
     glm::vec2 glm_vec(13.1f, 38.2f);
     Vec2 custom_vec(13.1f, 38.2f);
 
-    glm_vec += glm::vec2(2.8f, 48.3f);
-    custom_vec += Vec2(2.8f, 48.3f);
+    glm_vec -= glm::vec2(2.8f, 48.3f);
+    custom_vec -= Vec2(2.8f, 48.3f);
+
+    REQUIRE(floatCmp(glm_vec.x, custom_vec.x));
+    REQUIRE(floatCmp(glm_vec.y, custom_vec.y));
+  }
+}
+
+TEST_CASE("Vec2 assignment multiplication and division") {
+  {
+    glm::vec2 glm_vec(31231.1f, 38129.2f);
+    Vec2 custom_vec(31231.1f, 38129.2f);
+
+    glm_vec *= 3.3f;
+    custom_vec *= 3.3f;
+
+    REQUIRE(floatCmp(glm_vec.x, custom_vec.x));
+    REQUIRE(floatCmp(glm_vec.y, custom_vec.y));
+  }
+
+  {
+    glm::vec2 glm_vec(9417.122f);
+    Vec2 custom_vec(9417.122f);
+
+    glm_vec /= 23.4f;
+    custom_vec /= 23.4f;
 
     REQUIRE(floatCmp(glm_vec.x, custom_vec.x));
     REQUIRE(floatCmp(glm_vec.y, custom_vec.y));
