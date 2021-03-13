@@ -276,6 +276,13 @@ TEST_CASE("Vec3 init") {
     REQUIRE(vec.y == 1.77f);
     REQUIRE(vec.z == 0.42f);
   }
+
+  {
+    Vec3 vec(3.14f, 1.77f);
+    REQUIRE(3.14f == vec.x);
+    REQUIRE(1.77f == vec.y);
+    REQUIRE(0.00f == vec.z);
+  }
 }
 
 TEST_CASE("Vec3 copy and move constructor") {
@@ -295,5 +302,21 @@ TEST_CASE("Vec3 copy and move constructor") {
     REQUIRE(3.14f == dst.x);
     REQUIRE(1.77f == dst.y);
     REQUIRE(0.42f == dst.z);
+  }
+}
+
+TEST_CASE("Vec3 comparison") {
+  {
+    REQUIRE(Vec3() == Vec3());
+    REQUIRE(Vec3(2.3f) == Vec3(2.3f));
+    REQUIRE(Vec3(2.3f, 4.1f) == Vec3(2.3f, 4.1f));
+    REQUIRE(Vec3(3.14f, 1.77f, 0.42f) == Vec3(3.14f, 1.77f, 0.42f));
+  }
+
+  {
+    REQUIRE(Vec3() != Vec3(1.1f));
+    REQUIRE(Vec3(2.34f) != Vec3(2.3f));
+    REQUIRE(Vec3(2.312f, 4.1f) != Vec3(2.3f, 4.131f));
+    REQUIRE(Vec3(3.14f, 1.77000f, 0.42f) != Vec3(3.14f, 1.77f, 0.4212f));
   }
 }

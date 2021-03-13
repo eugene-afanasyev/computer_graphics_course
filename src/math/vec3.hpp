@@ -5,7 +5,7 @@ class Vec3 {
  public:
   Vec3();
   explicit Vec3(float value);
-  Vec3(float x, float y, float z);
+  Vec3(float x, float y, float z = 0.0f);
 
   Vec3(const Vec3&);
   Vec3(Vec3 &&) noexcept;

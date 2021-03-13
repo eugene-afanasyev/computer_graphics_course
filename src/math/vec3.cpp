@@ -18,3 +18,11 @@ Vec3::Vec3(Vec3 &&src) noexcept {
   z = src.z;
 }
 
+bool Vec3::operator==(const Vec3 &other) const {
+  return (x == other.x && y == other.y && z == other.z);
+}
+
+bool Vec3::operator!=(const Vec3 &other) const {
+  return !(*this == other);
+}
+
