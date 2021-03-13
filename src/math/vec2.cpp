@@ -40,3 +40,16 @@ float Vec2::length() const {
 float Vec2::operator*(const Vec2 &src) const {
   return x * src.x + y * src.y;
 }
+
+Vec2 Vec2::operator*(float value) const {
+  return Vec2(x * value, y * value);
+}
+
+Vec2 Vec2::operator/(float value) const {
+  return Vec2(x / value, y / value);
+}
+
+Vec2& Vec2::operator=(const Vec2 &src) {
+  x = src.x;
+  y = src.y;
+}

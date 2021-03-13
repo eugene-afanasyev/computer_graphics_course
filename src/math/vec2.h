@@ -23,7 +23,7 @@ class Vec2 {
   Vec2 operator*(float) const;  // multiplication with number
   Vec2 operator/(float) const;
 
-  void operator=(const Vec2 &);
+  Vec2& operator=(const Vec2 &);
   Vec2& operator+=(const Vec2 &);
   Vec2& operator-=(const Vec2 &);
 

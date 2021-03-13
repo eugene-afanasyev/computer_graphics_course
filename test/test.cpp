@@ -140,11 +140,22 @@ TEST_CASE("Vec2 addition and subtraction") {
 }
 
 TEST_CASE("Vec2 scalar multiplication") {
-  {
-    Vec2 custom_vec1(11.1f, 32.2f);
-    Vec2 custom_vec2(9.20f, 510.2f);
+  Vec2 custom_vec1(11.1f, 32.2f);
+  Vec2 custom_vec2(9.20f, 510.2f);
 
-    float custom_cross_result = custom_vec1 * custom_vec2;
-    REQUIRE(floatCmp(custom_cross_result, 16530.56f));
+  float custom_cross_result = custom_vec1 * custom_vec2;
+  REQUIRE(floatCmp(custom_cross_result, 16530.56f));
+}
+
+TEST_CASE("Vec2 multiplication and div on number") {
+  {
+    glm::vec2 glm_vec(12.4f, 32.1f);
+    Vec2 custom_vec(12.4f, 32.1f);
+
+    glm_vec = glm::operator*(glm_vec, {3});
+    custom_vec = custom_vec * 3;
+
+    REQUIRE(floatCmp(glm_vec.x, custom_vec.x));
+    REQUIRE(floatCmp(glm_vec.y, custom_vec.y));
   }
 }
