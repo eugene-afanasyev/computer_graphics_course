@@ -34,4 +34,14 @@ Vec3 Vec3::operator-(const Vec3 &src) const {
   return {x - src.x, y - src.y, z - src.z};
 }
 
+Vec3 Vec3::operator*(float val) const {
+  return {x * val, y * val, z * val};
+}
+
+Vec3 Vec3::operator/(float val) const {
+  return {x / val, y / val, z / val};
+}
+
+Vec3 &Vec3::operator=(const Vec3 &) = default;
+
 

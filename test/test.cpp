@@ -352,3 +352,29 @@ TEST_CASE("Vec3 sum and subtraction") {
     REQUIRE(glm_result_vec.z == custom_vec_result.z);
   }
 }
+
+TEST_CASE("Vec3 multiplication and division on a numbers") {
+  {
+    glm::vec3 glm_vec(0.3f, 21.4f, 11.12f);
+    Vec3 custom_vec(0.3f, 21.4f, 11.12f);
+
+    glm_vec = glm::operator*(glm_vec, {14.2});
+    custom_vec = custom_vec * 14.2;
+
+    REQUIRE(floatCmp(glm_vec.x, custom_vec.x));
+    REQUIRE(floatCmp(glm_vec.y, custom_vec.y));
+    REQUIRE(floatCmp(glm_vec.z, custom_vec.z));
+  }
+
+  {
+    glm::vec3 glm_vec(0.3f, 21.4f, 11.12f);
+    Vec3 custom_vec(0.3f, 21.4f, 11.12f);
+
+    glm_vec = glm::operator/(glm_vec, {14.2});
+    custom_vec = custom_vec / 14.2;
+
+    REQUIRE(floatCmp(glm_vec.x, custom_vec.x));
+    REQUIRE(floatCmp(glm_vec.y, custom_vec.y));
+    REQUIRE(floatCmp(glm_vec.z, custom_vec.z));
+  }
+}
