@@ -72,7 +72,7 @@ Vec3 &Vec3::operator/=(float v) {
 }
 
 float Vec3::length() const {
-  return sqrtf(x * x + y * y );
+  return sqrtf(x * x + y * y + z * z);
 }
 
 float Vec3::operator*(const Vec3 &src) const {

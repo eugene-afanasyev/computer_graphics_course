@@ -2,14 +2,15 @@
 
 #define EPSILON 1e-5
 
-#include "catch.hpp"
-#include "../src/math/vec2.hpp"
-#include "../src/math/vec3.hpp"
-
 #include <cmath>
+#include <cstdlib>
+#include <ctime>
 #include <glm/geometric.hpp>
 #include <glm/ext.hpp>
 #include <glm/ext/vector_float2.hpp>
+#include "catch.hpp"
+#include "../src/math/vec2.hpp"
+#include "../src/math/vec3.hpp"
 
 bool floatCmp(float a, float b) {
   return std::fabs(a - b) < EPSILON;
@@ -459,5 +460,44 @@ TEST_CASE("Vec3 assignment operations") {
     REQUIRE(floatCmp(glm_vec.x, custom_vec.x));
     REQUIRE(floatCmp(glm_vec.y, custom_vec.y));
     REQUIRE(floatCmp(glm_vec.z, custom_vec.z));
+  }
+}
+
+TEST_CASE("Vec3 scalar multiplication, normalization and length") {
+  {
+    Vec3 custom_vec0(12.1f, 0.3f, 21.2f);
+    Vec3 custom_vec1(1.1f, 3.4f, 44.2f);
+
+    float custom_vec_result = custom_vec0 * custom_vec1;
+
+    REQUIRE(custom_vec_result == 951.37006f);
+  }
+
+  {
+    Vec3 custom_vec0(12.12f, 134.14f, 20.2f);
+    Vec3 custom_vec1(12, 1.14f, 0.2f);
+
+    REQUIRE(floatCmp(custom_vec0.length(), 136.19278f));
+    REQUIRE(floatCmp(custom_vec1.length(), 12.05569f));
+  }
+
+  {
+    glm::vec3 glm_vec(12.124f, 2.1f, 192.2f);
+    Vec3 custom_vec(12.124f, 2.1f, 192.2f);
+
+    glm_vec = glm::normalize(glm_vec);
+
+    REQUIRE(floatCmp(glm_vec.x, custom_vec.normalize().x));
+    REQUIRE(floatCmp(glm_vec.y, custom_vec.normalize().y));
+  }
+
+  {
+    glm::vec3 glm_vec(120, 23.11f, 13123.2f);
+    Vec3 custom_vec(120, 23.11f, 13123.2f);
+
+    glm_vec = glm::normalize(glm_vec);
+
+    REQUIRE(floatCmp(glm_vec.x, custom_vec.normalize().x));
+    REQUIRE(floatCmp(glm_vec.y, custom_vec.normalize().y));
   }
 }
