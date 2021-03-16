@@ -11,6 +11,7 @@
 #include "catch.hpp"
 #include "../src/math/vec2.hpp"
 #include "../src/math/vec3.hpp"
+#include "../src/math/vec4.hpp"
 
 bool floatCmp(float a, float b) {
   return std::fabs(a - b) < EPSILON;
@@ -499,5 +500,41 @@ TEST_CASE("Vec3 scalar multiplication, normalization and length") {
 
     REQUIRE(floatCmp(glm_vec.x, custom_vec.normalize().x));
     REQUIRE(floatCmp(glm_vec.y, custom_vec.normalize().y));
+  }
+}
+
+/* Vec4 tests block */
+
+TEST_CASE("Vec4 constructors") {
+  {
+    Vec4 vec;
+    REQUIRE(vec.x == 0);
+    REQUIRE(vec.y == 0);
+    REQUIRE(vec.z == 0);
+    REQUIRE(vec.w == 0);
+  }
+
+  {
+    Vec4 vec(12.8f);
+    REQUIRE(vec.x == 12.8f);
+    REQUIRE(vec.y == 12.8f);
+    REQUIRE(vec.z == 12.8f);
+    REQUIRE(vec.w == 12.8f);
+  }
+
+  {
+    Vec4 vec(1.111f, 22.22f, 333.3f, 4444);
+    REQUIRE(vec.x == 1.111f);
+    REQUIRE(vec.y == 22.22f);
+    REQUIRE(vec.z == 333.3f);
+    REQUIRE(vec.w == 4444);
+  }
+
+  {
+    Vec4 vec(9.99f, 2.22f);
+    REQUIRE(vec.x == 9.99f);
+    REQUIRE(vec.y == 2.22f);
+    REQUIRE(vec.z == 0);
+    REQUIRE(vec.w == 0);
   }
 }
