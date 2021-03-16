@@ -26,11 +26,11 @@ bool Vec2::operator!=(const Vec2 &src) const {
 }
 
 Vec2 Vec2::operator+(const Vec2 &src) const {
-  return Vec2(x + src.x, y + src.y);
+  return {x + src.x, y + src.y};
 }
 
 Vec2 Vec2::operator-(const Vec2 &src) const {
-  return Vec2(x - src.x, y - src.y);
+  return {x - src.x, y - src.y};
 }
 
 float Vec2::length() const {
