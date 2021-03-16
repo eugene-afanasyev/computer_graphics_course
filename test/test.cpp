@@ -538,3 +538,25 @@ TEST_CASE("Vec4 constructors") {
     REQUIRE(vec.w == 0);
   }
 }
+
+TEST_CASE("Vec4 copy ctr and move ctr") {
+  {
+    Vec4 test_vec(1.111f, 22.22f, 333.3f, 4444);
+    Vec4 vec(test_vec);
+
+    REQUIRE(vec.x == 1.111f);
+    REQUIRE(vec.y == 22.22f);
+    REQUIRE(vec.z == 333.3f);
+    REQUIRE(vec.w == 4444);
+  }
+
+  {
+    Vec4 test_vec(1.111f, 22.22f, 333.3f, 4444);
+    Vec4 vec(std::move(test_vec));
+
+    REQUIRE(vec.x == 1.111f);
+    REQUIRE(vec.y == 22.22f);
+    REQUIRE(vec.z == 333.3f);
+    REQUIRE(vec.w == 4444);
+  }
+}
