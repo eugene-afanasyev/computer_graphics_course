@@ -378,3 +378,86 @@ TEST_CASE("Vec3 multiplication and division on a numbers") {
     REQUIRE(floatCmp(glm_vec.z, custom_vec.z));
   }
 }
+
+TEST_CASE("Vec3 assignment operations") {
+  {
+    Vec3 vec0(0, 0.3f, 21.2f);
+    Vec3 vec1(1.1f, 3, 22.2f);
+
+    vec0 = vec1;
+    REQUIRE(vec0 == vec1);
+    REQUIRE(vec0.x == 1.1f);
+    REQUIRE(vec0.y == 3.0f);
+    REQUIRE(vec0.z == 22.2f);
+  }
+
+  {
+    Vec3 custom_vec0(0, 0.3f, 21.2f);
+    Vec3 custom_vec1(1.1f, 3, 22.2f);
+
+    glm::vec3 glm_vec0(0, 0.3f, 21.2f);
+    glm::vec3 glm_vec1(1.1f, 3, 22.2f);
+
+    custom_vec0 += custom_vec1;
+    glm_vec0 += glm_vec1;
+
+    REQUIRE(floatCmp(glm_vec0.x, custom_vec0.x));
+    REQUIRE(floatCmp(glm_vec0.y, custom_vec0.y));
+    REQUIRE(floatCmp(glm_vec0.z, custom_vec0.z));
+  }
+
+  {
+    Vec3 custom_vec0(12.1f, 0.3f, 21.2f);
+    Vec3 custom_vec1(1.1f, 3.4f, 44.2f);
+
+    glm::vec3 glm_vec0(12.1f, 0.3f, 21.2f);
+    glm::vec3 glm_vec1(1.1f, 3.4f, 44.2f);
+
+    custom_vec0 -= custom_vec1;
+    glm_vec0 -= glm_vec1;
+
+    REQUIRE(floatCmp(glm_vec0.x, custom_vec0.x));
+    REQUIRE(floatCmp(glm_vec0.y, custom_vec0.y));
+    REQUIRE(floatCmp(glm_vec0.z, custom_vec0.z));
+  }
+
+  {
+    Vec3 custom_vec0(12.1f, 0.3f, 21.2f);
+    Vec3 custom_vec1(1.1f, 3.4f, 44.2f);
+
+    glm::vec3 glm_vec0(12.1f, 0.3f, 21.2f);
+    glm::vec3 glm_vec1(1.1f, 3.4f, 44.2f);
+
+    custom_vec0 -= custom_vec1;
+    glm_vec0 -= glm_vec1;
+
+    REQUIRE(floatCmp(glm_vec0.x, custom_vec0.x));
+    REQUIRE(floatCmp(glm_vec0.y, custom_vec0.y));
+    REQUIRE(floatCmp(glm_vec0.z, custom_vec0.z));
+  }
+
+  {
+    Vec3 custom_vec(12.1f, 0.3f, 21.2f);
+
+    glm::vec3 glm_vec(12.1f, 0.3f, 21.2f);
+
+    custom_vec *= 3.14f;
+    glm_vec = glm::operator*(glm_vec, 3.14f);
+
+    REQUIRE(floatCmp(glm_vec.x, custom_vec.x));
+    REQUIRE(floatCmp(glm_vec.y, custom_vec.y));
+    REQUIRE(floatCmp(glm_vec.z, custom_vec.z));
+  }
+
+  {
+    Vec3 custom_vec(12.1f, 1.3f, 21.2f);
+    glm::vec3 glm_vec(12.1f, 1.3f, 21.2f);
+
+    custom_vec /= 2.14f;
+    glm_vec = glm::operator/(glm_vec, 2.14f);
+
+    REQUIRE(floatCmp(glm_vec.x, custom_vec.x));
+    REQUIRE(floatCmp(glm_vec.y, custom_vec.y));
+    REQUIRE(floatCmp(glm_vec.z, custom_vec.z));
+  }
+}

@@ -14,8 +14,7 @@
   <component name="ChangeListManager">
     <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/vec2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/vec2.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/vec3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/vec3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +105,7 @@
       <workItem from="1615623864152" duration="2192000" />
       <workItem from="1615628467040" duration="1713000" />
       <workItem from="1615730526508" duration="1611000" />
-      <workItem from="1615885879917" duration="1700000" />
+      <workItem from="1615885879917" duration="2841000" />
     </task>
     <task id="LOCAL-00001" summary="Vec2 constructors realised and covered with tests">
       <created>1615556676953</created>
@@ -206,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615732383839</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Vec3 completely implemented">
+      <created>1615888041376</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1615888041376</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,9 +244,11 @@
     <MESSAGE value="some tests fixes, Vec3 comparison implemented and covered with tests" />
     <MESSAGE value="Vec3 sum and subtraction implemented and covered with tests" />
     <MESSAGE value="vec3 multiplication and div on a number implemented and covered with tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="vec3 multiplication and div on a number implemented and covered with tests" />
+    <MESSAGE value="Vec3 completely implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vec3 completely implemented" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615888073848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
