@@ -609,3 +609,31 @@ TEST_CASE("Vec4 sum and subtraction") {
     REQUIRE(floatCmp(custom_vec_result.w, glm_vec_result.w));
   }
 }
+
+TEST_CASE("Vec4 multiplication and div on a number") {
+  {
+    Vec4 custom_vec(12.4f, 44.4f, 29.4f, 0.23f);
+    glm::vec4 glm_vec(12.4f, 44.4f, 29.4f, 0.23f);
+
+    Vec4 custom_vec_result = custom_vec * 13.44f;
+    glm::vec4 glm_vec_result = glm_vec * 13.44f;
+
+    REQUIRE(floatCmp(custom_vec_result.x, glm_vec_result.x));
+    REQUIRE(floatCmp(custom_vec_result.y, glm_vec_result.y));
+    REQUIRE(floatCmp(custom_vec_result.z, glm_vec_result.z));
+    REQUIRE(floatCmp(custom_vec_result.w, glm_vec_result.w));
+  }
+
+  {
+    Vec4 custom_vec(12.4f, 44.4f, 29.4f, 0.23f);
+    glm::vec4 glm_vec(12.4f, 44.4f, 29.4f, 0.23f);
+
+    Vec4 custom_vec_result = custom_vec / 13.44f;
+    glm::vec4 glm_vec_result = glm_vec / 13.44f;
+
+    REQUIRE(floatCmp(custom_vec_result.x, glm_vec_result.x));
+    REQUIRE(floatCmp(custom_vec_result.y, glm_vec_result.y));
+    REQUIRE(floatCmp(custom_vec_result.z, glm_vec_result.z));
+    REQUIRE(floatCmp(custom_vec_result.w, glm_vec_result.w));
+  }
+}
