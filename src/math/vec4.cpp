@@ -68,4 +68,20 @@ Vec4 &Vec4::operator-=(const Vec4 &src) {
   return *this;
 }
 
+Vec4 &Vec4::operator*=(float v) {
+  x *= v;
+  y *= v;
+  z *= v;
+  w *= v;
+  return *this;
+}
+
+Vec4 &Vec4::operator/=(float v) {
+  x /= v;
+  y /= v;
+  z /= v;
+  w /= v;
+  return *this;
+}
+
 Vec4 &Vec4::operator=(const Vec4 &src) = default;

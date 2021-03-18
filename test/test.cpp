@@ -675,3 +675,25 @@ TEST_CASE("Vec4 assignment sum and subtraction") {
     REQUIRE(vec1.w == 150.0f);
   }
 }
+
+TEST_CASE("Vec4 assignment multiplication and div on a num") {
+  {
+    Vec4 vec1(10.0f, 20.0f, 300.0f, 400.0f);
+    vec1 *= 3.14f;
+
+    REQUIRE(vec1.x == 10.0f * 3.14f);
+    REQUIRE(vec1.y == 20.0f * 3.14f);
+    REQUIRE(vec1.z == 300.0f * 3.14f);
+    REQUIRE(vec1.w == 400.0f * 3.14f);
+  }
+
+  {
+    Vec4 vec1(10.0f, 20.0f, 300.0f, 400.0f);
+    vec1 /= 3.14f;
+
+    REQUIRE(floatCmp(vec1.x, 10.0f / 3.14f));
+    REQUIRE(floatCmp(vec1.y, 20.0f / 3.14f));
+    REQUIRE(floatCmp(vec1.z, 300.0f / 3.14f));
+    REQUIRE(floatCmp(vec1.w, 400.0f / 3.14f));
+  }
+}
