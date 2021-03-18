@@ -560,3 +560,18 @@ TEST_CASE("Vec4 copy ctr and move ctr") {
     REQUIRE(vec.w == 4444);
   }
 }
+
+TEST_CASE("Vec4 comparison") {
+  {
+    REQUIRE(Vec4() == Vec4());
+    REQUIRE(Vec4(12.3f) == Vec4(12.3f));
+    REQUIRE(Vec4(12.111f, 53.32f, 49.2f, 23.4f) == Vec4(12.111f, 53.32f, 49.2f, 23.4f));
+    REQUIRE(Vec4(12.111f, 53.32f, 49.4f) == Vec4(12.111f, 53.32f, 49.4f));
+  }
+  {
+    REQUIRE(Vec4(0.001) != Vec4(0.1f));
+    REQUIRE(Vec4(12) != Vec4(12.3f));
+    REQUIRE(Vec4(12.111f, 53.32f, 49.2f, 23.20f) != Vec4(12.111f, 53.32f, 49.2f, 23.4f));
+    REQUIRE(Vec4(12.111f, 53.32f) != Vec4(12.111f, 53.32f, 49.4f));
+  }
+}
