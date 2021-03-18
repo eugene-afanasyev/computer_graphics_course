@@ -117,7 +117,7 @@
       <workItem from="1615628467040" duration="1713000" />
       <workItem from="1615730526508" duration="1611000" />
       <workItem from="1615885879917" duration="8816000" />
-      <workItem from="1616067795021" duration="4679000" />
+      <workItem from="1616067795021" duration="5293000" />
     </task>
     <task id="LOCAL-00001" summary="Vec2 constructors realised and covered with tests">
       <created>1615556676953</created>
@@ -280,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616072810086</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Vec4 assignment multiplication and div on a num implemented and covered with tests">
+      <created>1616074615030</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1616074615030</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +328,8 @@
     <MESSAGE value="Vec4 sum and subtraction implemented and covered with tests" />
     <MESSAGE value="Vec4 multiplication and div on a number implemented and covered with tests" />
     <MESSAGE value="Vec4 assignment sum and subtraction implemented and covered with tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vec4 assignment sum and subtraction implemented and covered with tests" />
+    <MESSAGE value="Vec4 assignment multiplication and div on a num implemented and covered with tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vec4 assignment multiplication and div on a num implemented and covered with tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
