@@ -36,4 +36,12 @@ bool Vec4::operator!=(const Vec4 &other) const {
     w != other.w);
 }
 
+Vec4 Vec4::operator+(const Vec4 &src) const {
+  return {x + src.x, y + src.y, z + src.z, w + src.w};
+}
+
+Vec4 Vec4::operator-(const Vec4 &src) const {
+  return {x - src.x, y - src.y, z - src.z, w - src.w};
+}
+
 Vec4 &Vec4::operator=(const Vec4 &src) = default;

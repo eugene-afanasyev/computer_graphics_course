@@ -575,3 +575,37 @@ TEST_CASE("Vec4 comparison") {
     REQUIRE(Vec4(12.111f, 53.32f) != Vec4(12.111f, 53.32f, 49.4f));
   }
 }
+
+TEST_CASE("Vec4 sum and subtraction") {
+  {
+    Vec4 custom_vec0(12.4f, 44.4f, 29.4f, 0.23f);
+    Vec4 custom_vec1(20.5f, 77.7f, 2.4f, 11.3f);
+
+    glm::vec4 glm_vec0(12.4f, 44.4f, 29.4f, 0.23f);
+    glm::vec4 glm_vec1(20.5f, 77.7f, 2.4f, 11.3f);
+
+    Vec4 custom_vec_result = custom_vec0 + custom_vec1;
+    glm::vec4 glm_vec_result = glm_vec0 + glm_vec1;
+
+    REQUIRE(floatCmp(custom_vec_result.x, glm_vec_result.x));
+    REQUIRE(floatCmp(custom_vec_result.y, glm_vec_result.y));
+    REQUIRE(floatCmp(custom_vec_result.z, glm_vec_result.z));
+    REQUIRE(floatCmp(custom_vec_result.w, glm_vec_result.w));
+  }
+
+  {
+    Vec4 custom_vec0(12.4f, 44.4f, 29.4f, 0.23f);
+    Vec4 custom_vec1(20.5f, 77.7f, 2.4f, 11.3f);
+
+    glm::vec4 glm_vec0(12.4f, 44.4f, 29.4f, 0.23f);
+    glm::vec4 glm_vec1(20.5f, 77.7f, 2.4f, 11.3f);
+
+    Vec4 custom_vec_result = custom_vec0 - custom_vec1;
+    glm::vec4 glm_vec_result = glm_vec0 - glm_vec1;
+
+    REQUIRE(floatCmp(custom_vec_result.x, glm_vec_result.x));
+    REQUIRE(floatCmp(custom_vec_result.y, glm_vec_result.y));
+    REQUIRE(floatCmp(custom_vec_result.z, glm_vec_result.z));
+    REQUIRE(floatCmp(custom_vec_result.w, glm_vec_result.w));
+  }
+}
