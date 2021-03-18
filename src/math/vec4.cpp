@@ -52,4 +52,20 @@ Vec4 Vec4::operator/(float v) const {
   return {x / v, y / v, z / v, w / v};
 }
 
+Vec4 &Vec4::operator+=(const Vec4 &src) {
+  x += src.x;
+  y += src.y;
+  z += src.z;
+  w += src.w;
+  return *this;
+}
+
+Vec4 &Vec4::operator-=(const Vec4 &src) {
+  x -= src.x;
+  y -= src.y;
+  z -= src.z;
+  w -= src.w;
+  return *this;
+}
+
 Vec4 &Vec4::operator=(const Vec4 &src) = default;

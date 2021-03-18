@@ -637,3 +637,41 @@ TEST_CASE("Vec4 multiplication and div on a number") {
     REQUIRE(floatCmp(custom_vec_result.w, glm_vec_result.w));
   }
 }
+
+TEST_CASE("Vec4 assignment sum and subtraction") {
+  {
+    Vec4 vec1(10.0f, 20.0f, 300.0f, 400.0f);
+    Vec4 vec2(5.0f, 15.0f, 350.0f, 450.0f);
+    Vec4 vec3(2.0f, 2.0f, 200.0f, 200.0f);
+
+    vec1 += vec2 += vec3;
+
+    REQUIRE(vec2.x == 7.0f);
+    REQUIRE(vec2.y == 17.0f);
+    REQUIRE(vec2.z == 550.0f);
+    REQUIRE(vec2.w == 650.0f);
+
+    REQUIRE(vec1.x == 17.0f);
+    REQUIRE(vec1.y == 37.0f);
+    REQUIRE(vec1.z == 850.0f);
+    REQUIRE(vec1.w == 1050.0f);
+  }
+
+  {
+    Vec4 vec1(10.0f, 20.0f, 300.0f, 400.0f);
+    Vec4 vec2(5.0f, 15.0f, 350.0f, 450.0f);
+    Vec4 vec3(2.0f, 2.0f, 200.0f, 200.0f);
+
+    vec1 -= vec2 -= vec3;
+
+    REQUIRE(vec2.x == 3.0f);
+    REQUIRE(vec2.y == 13.0f);
+    REQUIRE(vec2.z == 150.0f);
+    REQUIRE(vec2.w == 250.0f);
+
+    REQUIRE(vec1.x == 7.0f);
+    REQUIRE(vec1.y == 7.0f);
+    REQUIRE(vec1.z == 150.0f);
+    REQUIRE(vec1.w == 150.0f);
+  }
+}
