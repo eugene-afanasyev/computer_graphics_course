@@ -14,7 +14,7 @@ if (GLEW_FOUND)
     message(STATUS "GLEW ${GLEW_LIBRARIES}")
 endif()
 
-add_executable(computer_graphics_course test/test.cpp ex.h 3rd/stb/stb_image.h 3rd/stb/stb_image.cpp utils/shaderLoader.h
+add_executable(computer_graphics_course test/vec_test.cpp ex.h 3rd/stb/stb_image.h 3rd/stb/stb_image.cpp utils/shaderLoader.h
         utils/shaderLoader.cpp src/shader_wrapper.cpp src/shader_wrapper.h src/math/vec2.cpp src/math/vec2.hpp src/math/vec3.cpp src/math/vec3.hpp src/math/vec4.cpp src/math/vec4.hpp)
 
 target_link_libraries(computer_graphics_course sfml-graphics sfml-audio GL GLEW)

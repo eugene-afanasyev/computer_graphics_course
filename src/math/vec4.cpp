@@ -1,3 +1,4 @@
+#include <cmath>
 #include "vec4.hpp"
 
 Vec4::Vec4() : x(0), y(0), z(0), w(0) {}
@@ -82,6 +83,19 @@ Vec4 &Vec4::operator/=(float v) {
   z /= v;
   w /= v;
   return *this;
+}
+
+float Vec4::length() const {
+  return sqrtf(x * x + y * y + z * z + w * w);
+}
+
+float Vec4::operator*(const Vec4 &src) const {
+  return x * src.x + y * src.y + z * src.z + w * src.w;
+}
+
+Vec4 Vec4::normalize() const {
+  float inv_length = 1.0f / sqrtf(x * x + y * y + z * z + w * w);
+  return (*this * inv_length);
 }
 
 Vec4 &Vec4::operator=(const Vec4 &src) = default;

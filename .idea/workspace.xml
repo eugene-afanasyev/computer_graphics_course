@@ -14,8 +14,9 @@
   <component name="ChangeListManager">
     <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math/vec4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/vec4.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/vec_test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +118,7 @@
       <workItem from="1615628467040" duration="1713000" />
       <workItem from="1615730526508" duration="1611000" />
       <workItem from="1615885879917" duration="8816000" />
-      <workItem from="1616067795021" duration="5293000" />
+      <workItem from="1616067795021" duration="7504000" />
     </task>
     <task id="LOCAL-00001" summary="Vec2 constructors realised and covered with tests">
       <created>1615556676953</created>
@@ -287,7 +288,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616074615030</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Vec4 assignment multiplication and div on a num implemented and covered with tests">
+      <created>1616074642594</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1616074642594</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Vec4 assignment multiplication and div on a num implemented and covered with tests">
+      <created>1616074651875</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1616074651875</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

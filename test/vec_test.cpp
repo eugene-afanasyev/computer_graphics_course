@@ -697,3 +697,32 @@ TEST_CASE("Vec4 assignment multiplication and div on a num") {
     REQUIRE(floatCmp(vec1.w, 400.0f / 3.14f));
   }
 }
+
+TEST_CASE("Vec4 length, scalar multiplication and norm") {
+  {
+    REQUIRE(Vec4().length() == 0.0f);
+    REQUIRE(floatCmp(Vec4(3.14, 42.42, 7.77, 333).length(), 335.79559f));
+    REQUIRE(floatCmp(Vec4(3.3, 5.5, 4.4, 2.1).length(), 8.0566742518f));
+  }
+
+  {
+    glm::vec4 glm_vec(12.4f, 32.1f, 32.2f, 10.4f);
+    Vec4 custom_vec(12.4f, 32.1f, 32.2f, 10.4f);
+
+    glm_vec = glm::normalize(glm_vec);
+
+    REQUIRE(floatCmp(glm_vec.x, custom_vec.normalize().x));
+    REQUIRE(floatCmp(glm_vec.y, custom_vec.normalize().y));
+    REQUIRE(floatCmp(glm_vec.z, custom_vec.normalize().z));
+    REQUIRE(floatCmp(glm_vec.w, custom_vec.normalize().w));
+  }
+
+  {
+    Vec4 vec0(0.12f, 32.2f, 49.3f, 12.1f);
+    Vec4 vec1(120.2f, 0.4f, 40.4f, 39.12f);
+
+    float vec_res = vec0 * vec1;
+
+    REQUIRE(floatCmp(vec_res, 2492.376f));
+  }
+}
