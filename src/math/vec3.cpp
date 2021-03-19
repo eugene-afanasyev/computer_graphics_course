@@ -1,5 +1,6 @@
 #include <cmath>
 #include "vec3.hpp"
+#include "utils.hpp"
 
 using Vec3 = cglm::Vec3;
 
@@ -22,11 +23,17 @@ Vec3::Vec3(Vec3 &&src) noexcept {
 }
 
 bool Vec3::operator==(const Vec3 &src) const {
-  return (x == src.x && y == src.y && z == src.z);
+  return (
+     cglm::IsFloatEqual(x, src.x) &&
+     cglm::IsFloatEqual(y, src.y) &&
+     cglm::IsFloatEqual(z, src.z));
 }
 
 bool Vec3::operator!=(const Vec3 &src) const {
-  return !(*this == src);
+  return !(
+     cglm::IsFloatEqual(x, src.x) &&
+     cglm::IsFloatEqual(y, src.y) &&
+     cglm::IsFloatEqual(z, src.z));
 }
 
 Vec3 Vec3::operator+(const Vec3 &src) const {

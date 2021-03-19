@@ -1,5 +1,6 @@
 #include <cmath>
 #include "vec2.hpp"
+#include "utils.hpp"
 
 using Vec2 = cglm::Vec2;
 
@@ -20,11 +21,11 @@ Vec2::Vec2(Vec2 &&src)  noexcept {
 }
 
 bool Vec2::operator==(const Vec2 &src) const {
-  return x == src.x && y == src.y;
+  return cglm::IsFloatEqual(x, src.x) &&  cglm::IsFloatEqual(y, src.y);
 }
 
 bool Vec2::operator!=(const Vec2 &src) const {
-  return !(*this == src);
+  return !(cglm::IsFloatEqual(x, src.x) &&  cglm::IsFloatEqual(y, src.y));
 }
 
 Vec2 Vec2::operator+(const Vec2 &src) const {

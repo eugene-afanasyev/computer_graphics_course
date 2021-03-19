@@ -1,8 +1,6 @@
 #ifndef COMPUTER_GRAPHICS_COURSE_SRC_MATH_VEC2_HPP_
 #define COMPUTER_GRAPHICS_COURSE_SRC_MATH_VEC2_HPP_
 
-#include <memory>
-
 namespace cglm {
 
 class Vec2 {

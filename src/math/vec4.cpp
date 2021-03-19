@@ -1,5 +1,6 @@
 #include <cmath>
 #include "vec4.hpp"
+#include "utils.hpp"
 
 using Vec4 = cglm::Vec4;
 
@@ -23,20 +24,20 @@ Vec4::Vec4(Vec4 &&src) noexcept {
   w = src.w;
 }
 
-bool Vec4::operator==(const Vec4 &other) const {
+bool Vec4::operator==(const Vec4 &src) const {
   return (
-    x == other.x &&
-    y == other.y &&
-    z == other.z &&
-    w == other.w);
+    cglm::IsFloatEqual(x, src.x) &&
+    cglm::IsFloatEqual(y, src.y) &&
+    cglm::IsFloatEqual(z, src.z) &&
+    cglm::IsFloatEqual(w, src.w));
 }
 
-bool Vec4::operator!=(const Vec4 &other) const {
-  return (
-    x != other.x ||
-    y != other.y ||
-    z != other.z ||
-    w != other.w);
+bool Vec4::operator!=(const Vec4 &src) const {
+  return !(
+    cglm::IsFloatEqual(x, src.x) &&
+    cglm::IsFloatEqual(y, src.y) &&
+    cglm::IsFloatEqual(z, src.z) &&
+    cglm::IsFloatEqual(w, src.w));
 }
 
 Vec4 Vec4::operator+(const Vec4 &src) const {

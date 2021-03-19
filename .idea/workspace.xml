@@ -15,8 +15,13 @@
     <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/src/math/mat2.cpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/math/mat2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/math/utils.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/vec2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/vec2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/vec2.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/vec2.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/vec3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/vec3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/vec4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/vec4.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +124,7 @@
       <workItem from="1615730526508" duration="1611000" />
       <workItem from="1615885879917" duration="8816000" />
       <workItem from="1616067795021" duration="7951000" />
-      <workItem from="1616122411251" duration="492000" />
+      <workItem from="1616122411251" duration="4116000" />
     </task>
     <task id="LOCAL-00001" summary="Vec2 constructors realised and covered with tests">
       <created>1615556676953</created>
@@ -310,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616085939097</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="custom gl math library wrapped in a namespace">
+      <created>1616123432418</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1616123432418</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +365,8 @@
     <MESSAGE value="Vec4 assignment sum and subtraction implemented and covered with tests" />
     <MESSAGE value="Vec4 assignment multiplication and div on a num implemented and covered with tests" />
     <MESSAGE value="Vec4 length, scalar multiplication and norm implemented and covered with tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vec4 length, scalar multiplication and norm implemented and covered with tests" />
+    <MESSAGE value="custom gl math library wrapped in a namespace" />
+    <option name="LAST_COMMIT_MESSAGE" value="custom gl math library wrapped in a namespace" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
