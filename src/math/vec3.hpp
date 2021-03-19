@@ -1,6 +1,8 @@
 #ifndef COMPUTER_GRAPHICS_COURSE_SRC_MATH_VEC3_HPP_
 #define COMPUTER_GRAPHICS_COURSE_SRC_MATH_VEC3_HPP_
 
+namespace cglm {
+
 class Vec3 {
  public:
   Vec3();
@@ -35,5 +37,7 @@ class Vec3 {
 
   float x, y, z;
 };
+
+}  // cglm
 
 #endif //COMPUTER_GRAPHICS_COURSE_SRC_MATH_VEC3_HPP_

@@ -13,6 +13,10 @@
 #include "../src/math/vec3.hpp"
 #include "../src/math/vec4.hpp"
 
+using Vec2 = cglm::Vec2;
+using Vec3 = cglm::Vec3;
+using Vec4 = cglm::Vec4;
+
 bool floatCmp(float a, float b) {
   return std::fabs(a - b) < EPSILON;
 }

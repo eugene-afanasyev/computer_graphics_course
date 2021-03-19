@@ -3,6 +3,8 @@
 
 #include <memory>
 
+namespace cglm {
+
 class Vec2 {
  public:
   Vec2();
@@ -23,7 +25,7 @@ class Vec2 {
   Vec2 operator*(float) const;  // multiplication with number
   Vec2 operator/(float) const;
 
-  Vec2& operator=(const Vec2 &);
+  Vec2& operator=(const Vec2 &) = default;
   Vec2& operator+=(const Vec2 &);
   Vec2& operator-=(const Vec2 &);
 
@@ -38,5 +40,6 @@ class Vec2 {
   float x, y;
 };
 
-#endif  //COMPUTER_GRAPHICS_COURSE_SRC_MATH_VEC2_HPP_
+}  // cglm
 
+#endif  //COMPUTER_GRAPHICS_COURSE_SRC_MATH_VEC2_HPP_

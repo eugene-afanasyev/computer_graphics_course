@@ -15,7 +15,7 @@ if (GLEW_FOUND)
 endif()
 
 add_executable(computer_graphics_course test/vec_test.cpp ex.h 3rd/stb/stb_image.h 3rd/stb/stb_image.cpp utils/shaderLoader.h
-        utils/shaderLoader.cpp src/shader_wrapper.cpp src/shader_wrapper.h src/math/vec2.cpp src/math/vec2.hpp src/math/vec3.cpp src/math/vec3.hpp src/math/vec4.cpp src/math/vec4.hpp)
+        utils/shaderLoader.cpp src/shader_wrapper.cpp src/shader_wrapper.h src/math/vec2.cpp src/math/vec2.hpp src/math/vec3.cpp src/math/vec3.hpp src/math/vec4.cpp src/math/vec4.hpp src/math/mat2.cpp src/math/mat2.h)
 
 target_link_libraries(computer_graphics_course sfml-graphics sfml-audio GL GLEW)
 

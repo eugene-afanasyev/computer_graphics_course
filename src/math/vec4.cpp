@@ -1,6 +1,8 @@
 #include <cmath>
 #include "vec4.hpp"
 
+using Vec4 = cglm::Vec4;
+
 Vec4::Vec4() : x(0), y(0), z(0), w(0) {}
 
 Vec4::Vec4(float value) : x(value), y(value), z(value), w(value) {}

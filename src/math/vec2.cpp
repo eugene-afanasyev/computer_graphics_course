@@ -1,6 +1,8 @@
 #include <cmath>
 #include "vec2.hpp"
 
+using Vec2 = cglm::Vec2;
+
 Vec2::Vec2() : x(0.0f), y(0.0f) {}
 
 Vec2::Vec2(float value) : x(value), y(value) {}
@@ -48,8 +50,6 @@ Vec2 Vec2::operator*(float value) const {
 Vec2 Vec2::operator/(float value) const {
   return {x / value, y / value};
 }
-
-Vec2& Vec2::operator=(const Vec2 &src) = default;
 
 Vec2 &Vec2::operator+=(const Vec2 &src) {
   x += src.x;
