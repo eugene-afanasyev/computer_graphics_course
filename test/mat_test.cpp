@@ -67,6 +67,17 @@ TEST_CASE("Mat2 constructors and accessors") {
 
     REQUIRE(mat.get_diag() == Vec2(3.14f, 3.14f));
   }
+
+  {
+    Mat2 mat({3, 10},
+             {12.3f, 11.2f});
+
+    REQUIRE(mat.get_row(0) == Vec2(3, 10));
+    REQUIRE(mat.get_row(1) == Vec2(12.3f, 11.2f));
+
+    REQUIRE(mat.get_col(0) == Vec2(3, 12.3f));
+    REQUIRE(mat.get_col(1) == Vec2(10, 11.2f));
+
+    REQUIRE(mat.get_diag() == Vec2(3, 11.2f));
+  }
 }
-
-

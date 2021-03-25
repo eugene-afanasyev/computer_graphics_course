@@ -13,12 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/math/mat2.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/math/mat2.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/vec2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/vec2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/mat2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/mat2.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat2.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mat_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +115,7 @@
       <workItem from="1615885879917" duration="8816000" />
       <workItem from="1616067795021" duration="7951000" />
       <workItem from="1616122411251" duration="14270000" />
-      <workItem from="1616676168251" duration="367000" />
+      <workItem from="1616676168251" duration="2098000" />
     </task>
     <task id="LOCAL-00001" summary="Vec2 constructors realised and covered with tests">
       <created>1615556676953</created>
@@ -329,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616154817291</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Mat2 constructors an accessors implemented and covered with tests">
+      <created>1616676660840</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1616676660840</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +353,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Vec2 comparison methods implemented and covered with tests" />
     <MESSAGE value="Vec2 addition and subtraction implemented and covered with tests" />
     <MESSAGE value="Vec2 scalar production implemented and covered with tests" />
     <MESSAGE value="Vec2 multiplication and division on scalar implemented and covered" />
@@ -373,7 +377,8 @@
     <MESSAGE value="custom gl math library wrapped in a namespace" />
     <MESSAGE value="important fixes, refactoring work" />
     <MESSAGE value="added exception.hpp" />
-    <option name="LAST_COMMIT_MESSAGE" value="added exception.hpp" />
+    <MESSAGE value="Mat2 constructors an accessors implemented and covered with tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat2 constructors an accessors implemented and covered with tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

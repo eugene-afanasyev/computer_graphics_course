@@ -16,12 +16,17 @@ class Mat2 {
   explicit Mat2(float);
   explicit Mat2(vec_type const& diag_vec);
   Mat2(float, float);
+  Mat2(const Vec2& r1, const Vec2& r2);
+
   Mat2(const Mat2&) = default;
 
   // -- Access --
   vec_type get_row(uint32_t r) const;  // access row
   vec_type get_col(uint32_t c) const;  // access column
   vec_type get_diag() const noexcept;
+
+  // -- Arithmetic operations --
+//  Mat2 operator+(const Mat2&) const;
 
  private:
   vec_array rows_;

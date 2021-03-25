@@ -38,3 +38,8 @@ Mat2::vec_type cglm::Mat2::get_col(uint32_t c) const {
 Mat2::vec_type cglm::Mat2::get_diag() const noexcept {
   return {rows_[0].x, rows_[1].y};
 }
+
+cglm::Mat2::Mat2(const cglm::Vec2 &r0, const cglm::Vec2 &r1) {
+  rows_[0] = r0;
+  rows_[1] = r1;
+}
