@@ -15,7 +15,7 @@ Vec2::Vec2(const Vec2 &src) {
   y = src.y;
 }
 
-Vec2::Vec2(Vec2 &&src)  noexcept {
+Vec2::Vec2(Vec2 &&src) noexcept {
   x = src.x;
   y = src.y;
 }

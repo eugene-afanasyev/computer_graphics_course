@@ -1,0 +1,40 @@
+#include "mat2.hpp"
+#include "exception.hpp"
+
+using Mat2 = cglm::Mat2;
+
+Mat2::Mat2(float v) {
+  rows_[0].x = v;
+  rows_[1].y = v;
+}
+
+Mat2::Mat2(float v0, float v1) {
+  rows_[0].x = v0;
+  rows_[1].y = v1;
+}
+
+Mat2::Mat2(const Mat2::vec_type &diag_vec) {
+  rows_[0].x = diag_vec.x;
+  rows_[1].y = diag_vec.y;
+}
+
+Mat2::vec_type cglm::Mat2::get_row(uint32_t r) const {
+  if (r < 0u || r > 1u)
+    throw cglm::OutOfRangeException();
+  else
+    return rows_[r];
+}
+
+Mat2::vec_type cglm::Mat2::get_col(uint32_t c) const {
+  if (c < 0u || c > 1u)
+    throw cglm::OutOfRangeException();
+  else
+    if (c == 0)
+      return {rows_[0].x, rows_[1].x};
+    else
+      return {rows_[0].y, rows_[1].y};
+}
+
+Mat2::vec_type cglm::Mat2::get_diag() const noexcept {
+  return {rows_[0].x, rows_[1].y};
+}
