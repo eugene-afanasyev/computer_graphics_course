@@ -1,6 +1,8 @@
 #define CATCH_CONFIG_MAIN
 
 #include <glm/mat2x2.hpp>
+#include <glm/ext/vector_int1.hpp>
+#include <glm/ext/scalar_common.hpp>
 #include <iostream>
 #include "catch.hpp"
 #include "../src/math/mat2.hpp"
@@ -134,18 +136,18 @@ TEST_CASE("Mat2 binary arithmetic operations") {
 
 TEST_CASE("Mat2 multiplication") {
   {
-//    glm::mat2 glm_mat =
-//      glm::mat2({3, 1}, {12, 14}) *
-//      glm::mat2({123, 33}, {13.2f, 4.4f});
+    glm::mat2 glm_mat =
+      glm::mat2({3, 12}, {1, 14}) *
+      glm::mat2({123, 13.2f}, {33, 4.4f});
 
     Mat2 mat =
       Mat2{{3, 1}, {12, 14}} *
       Mat2{{123, 33}, {13.2f, 4.4f}};
 
-    REQUIRE(floatCmp(382.2, mat[0].x));
-    REQUIRE(floatCmp(103.4, mat[0].y));
-    REQUIRE(floatCmp(1660.8, mat[1].x));
-    REQUIRE(floatCmp(457.6, mat[1].y));
+    REQUIRE(floatCmp(glm_mat[0].x, mat[0].x));
+    REQUIRE(floatCmp(glm_mat[1].x, mat[0].y));
+    REQUIRE(floatCmp(glm_mat[0].y, mat[1].x));
+    REQUIRE(floatCmp(glm_mat[1].y, mat[1].y));
   }
 }
 
