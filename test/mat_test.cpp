@@ -170,3 +170,25 @@ TEST_CASE("Mat2 division on a number") {
   REQUIRE(floatCmp(10.01f, mat[1].x));
   REQUIRE(floatCmp(0.111f, mat[1].y));
 }
+
+TEST_CASE("Mat2 sum and subtraction on a number") {
+  {
+    Mat2 mat = Mat2({10.14f, 10},
+                    {14.3f, 12.2f}) + 10;
+
+    REQUIRE(floatCmp(20.14f, mat[0].x));
+    REQUIRE(floatCmp(20, mat[0].y));
+    REQUIRE(floatCmp(24.3f, mat[1].x));
+    REQUIRE(floatCmp(22.2f, mat[1].y));
+  }
+
+  {
+    Mat2 mat = Mat2({10.14f, 10},
+                    {14.3f, 12.2f}) - 5;
+
+    REQUIRE(floatCmp(5.14f, mat[0].x));
+    REQUIRE(floatCmp(5, mat[0].y));
+    REQUIRE(floatCmp(9.3f, mat[1].x));
+    REQUIRE(floatCmp(7.2f, mat[1].y));
+  }
+}

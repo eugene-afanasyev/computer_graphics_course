@@ -14,6 +14,8 @@
   <component name="ChangeListManager">
     <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/mat2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/mat2.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat2.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/mat_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -382,7 +384,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616730352666</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Mat2 multiplication on a num implemented and covered with tests">
+      <created>1616769544968</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1616769544968</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Mat2 division on a num implemented and covered with tests">
+      <created>1616769944859</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1616769944859</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +417,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed Vec3 move ctr tests" />
     <MESSAGE value="some tests fixes, Vec3 comparison implemented and covered with tests" />
     <MESSAGE value="Vec3 sum and subtraction implemented and covered with tests" />
     <MESSAGE value="vec3 multiplication and div on a number implemented and covered with tests" />
@@ -426,7 +441,8 @@
     <MESSAGE value="Mat2 subtraction implemented and covered with tests" />
     <MESSAGE value="Mat2 multiplication implemented and covered with tests" />
     <MESSAGE value="Mat2 multiplication on a num implemented and covered with tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat2 multiplication on a num implemented and covered with tests" />
+    <MESSAGE value="Mat2 division on a num implemented and covered with tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat2 division on a num implemented and covered with tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
