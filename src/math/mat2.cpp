@@ -43,3 +43,15 @@ cglm::Mat2::Mat2(const cglm::Vec2 &r0, const cglm::Vec2 &r1) {
   rows_[0] = r0;
   rows_[1] = r1;
 }
+
+Mat2 cglm::Mat2::operator+(const Mat2 &src) const {
+  return Mat2(
+      rows_[0] + src.get_row(0),
+      rows_[1] + src.get_row(1));
+}
+
+Mat2 cglm::Mat2::operator-(const Mat2 &src) const {
+  return Mat2(
+    rows_[0] - src.get_row(0),
+    rows_[1] - src.get_row(1));
+}

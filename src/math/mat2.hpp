@@ -25,8 +25,9 @@ class Mat2 {
   vec_type get_col(uint32_t c) const;  // access column
   vec_type get_diag() const noexcept;
 
-  // -- Arithmetic operations --
-//  Mat2 operator+(const Mat2&) const;
+  // -- Binary arithmetic operations --
+  Mat2 operator+(const Mat2&) const;
+  Mat2 operator-(const Mat2&) const;
 
  private:
   vec_array rows_;
