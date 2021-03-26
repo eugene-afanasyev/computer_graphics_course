@@ -160,3 +160,13 @@ TEST_CASE("Mat2 multiplication on a number") {
   REQUIRE(floatCmp(1001.0f, mat[1].x));
   REQUIRE(floatCmp(11.1f, mat[1].y));
 }
+
+TEST_CASE("Mat2 division on a number") {
+  Mat2 mat =
+    Mat2({3.14, 32.2f}, {100.1f, 1.11f}) / 10;
+
+  REQUIRE(floatCmp(0.314f, mat[0].x));
+  REQUIRE(floatCmp(3.220f, mat[0].y));
+  REQUIRE(floatCmp(10.01f, mat[1].x));
+  REQUIRE(floatCmp(0.111f, mat[1].y));
+}

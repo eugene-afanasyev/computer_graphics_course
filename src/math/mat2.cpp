@@ -75,3 +75,7 @@ Mat2 cglm::Mat2::operator*(const Mat2 &src) const {
 Mat2 cglm::Mat2::operator*(float v) const {
   return {rows_[0] * v, rows_[1] * v};
 }
+
+Mat2 cglm::Mat2::operator/(float v) const {
+  return {rows_[0] / v, rows_[1] / v};
+}

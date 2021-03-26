@@ -31,11 +31,12 @@ class Mat2 {
   Mat2 operator-(const Mat2&) const;
   Mat2 operator*(const Mat2&) const;
   Mat2 operator*(float) const;
+  Mat2 operator/(float) const;
 
  private:
   vec_array rows_;
 };
 
-}  // cglm
+}  // namespace cglm
 
 #endif //COMPUTER_GRAPHICS_COURSE_SRC_MATH_MAT2_HPP_
