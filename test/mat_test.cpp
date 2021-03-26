@@ -10,7 +10,7 @@ using Mat2 = cglm::Mat2;
 using Vec2 = cglm::Vec2;
 
 bool floatCmp(float a, float b) {
-  return std::fabs(a - b) < 1e-7;
+  return std::fabs(a - b) < 1e-5;
 }
 
 TEST_CASE("Mat2 constructors and accessors") {
@@ -147,4 +147,14 @@ TEST_CASE("Mat2 multiplication") {
     REQUIRE(floatCmp(1660.8, mat[1].x));
     REQUIRE(floatCmp(457.6, mat[1].y));
   }
+}
+
+TEST_CASE("Mat2 multiplication on a number") {
+  Mat2 mat =
+    Mat2({3.14, 32.2f}, {100.1f, 1.11f}) * 10;
+
+  REQUIRE(floatCmp(31.4f, mat[0].x));
+  REQUIRE(floatCmp(322.0f, mat[0].y));
+  REQUIRE(floatCmp(1001.0f, mat[1].x));
+  REQUIRE(floatCmp(11.1f, mat[1].y));
 }

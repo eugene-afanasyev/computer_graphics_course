@@ -30,6 +30,7 @@ class Mat2 {
   Mat2 operator+(const Mat2&) const;
   Mat2 operator-(const Mat2&) const;
   Mat2 operator*(const Mat2&) const;
+  Mat2 operator*(float) const;
 
  private:
   vec_array rows_;
