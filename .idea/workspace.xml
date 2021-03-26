@@ -116,7 +116,7 @@
       <workItem from="1616067795021" duration="7951000" />
       <workItem from="1616122411251" duration="14270000" />
       <workItem from="1616676168251" duration="2585000" />
-      <workItem from="1616725614061" duration="762000" />
+      <workItem from="1616725614061" duration="3997000" />
     </task>
     <task id="LOCAL-00001" summary="Vec2 constructors realised and covered with tests">
       <created>1615556676953</created>
@@ -349,7 +349,28 @@
       <option name="project" value="LOCAL" />
       <updated>1616726066674</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Mat2 indexing subscript operator implemented and covered with tests">
+      <created>1616726398302</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1616726398302</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Mat2 indexing subscript operator implemented and covered with tests">
+      <created>1616726427629</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1616726427629</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Mat2 subtraction implemented and covered with tests">
+      <created>1616726581763</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1616726581763</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,8 +389,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Vec2 multiplication and division on scalar implemented and covered" />
-    <MESSAGE value="Vec2 assignment addition and subtraction covered with tests" />
     <MESSAGE value="Vec2 assignment multiplication and division covered with tests" />
     <MESSAGE value="Vec3 init, copy and move constructors implemented and covered with tests" />
     <MESSAGE value="fixed Vec3 move ctr tests" />
@@ -393,7 +412,9 @@
     <MESSAGE value="Mat2 constructors an accessors implemented and covered with tests" />
     <MESSAGE value="Mat2: added and tested new constructor" />
     <MESSAGE value="Mat2 sum implemented and covered with tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat2 sum implemented and covered with tests" />
+    <MESSAGE value="Mat2 indexing subscript operator implemented and covered with tests" />
+    <MESSAGE value="Mat2 subtraction implemented and covered with tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat2 subtraction implemented and covered with tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -29,6 +29,7 @@ class Mat2 {
   // -- Binary arithmetic operations --
   Mat2 operator+(const Mat2&) const;
   Mat2 operator-(const Mat2&) const;
+  Mat2 operator*(const Mat2&) const;
 
  private:
   vec_array rows_;

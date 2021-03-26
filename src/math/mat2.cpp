@@ -62,3 +62,13 @@ Mat2::vec_type cglm::Mat2::operator[](unsigned int r) const {
   else
     return rows_[r];
 }
+
+Mat2 cglm::Mat2::operator*(const Mat2 &src) const {
+  Vec2 row0(rows_[0].x * src[0].x + rows_[0].y * src[1].x,
+            rows_[0].x * src[0].y + rows_[0].y * src[1].y);
+
+  Vec2 row1(rows_[1].x * src[0].x + rows_[1].y * src[1].x,
+            rows_[1].x * src[0].y + rows_[1].y * src[1].y);
+
+  return {row0, row1};
+}
