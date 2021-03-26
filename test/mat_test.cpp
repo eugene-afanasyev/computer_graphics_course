@@ -99,9 +99,9 @@ TEST_CASE("Mat2 binary arithmetic operations") {
     glm::mat2 glm_mat_result = glm_mat1 + glm_mat2;
     Mat2 mat_result = mat1 + mat2;
 
-    REQUIRE(glm_mat_result[0].x == mat_result.get_row(0).x);
-    REQUIRE(glm_mat_result[0].y == mat_result.get_row(0).y);
-    REQUIRE(glm_mat_result[1].x == mat_result.get_row(1).x);
-    REQUIRE(glm_mat_result[1].y == mat_result.get_row(1).y);
+    REQUIRE(glm_mat_result[0].x == mat_result[0].x);
+    REQUIRE(glm_mat_result[0].y == mat_result[0].y);
+    REQUIRE(glm_mat_result[1].x == mat_result[1].x);
+    REQUIRE(glm_mat_result[1].y == mat_result[1].y);
   }
 }

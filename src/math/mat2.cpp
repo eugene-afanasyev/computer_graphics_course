@@ -55,3 +55,10 @@ Mat2 cglm::Mat2::operator-(const Mat2 &src) const {
     rows_[0] - src.get_row(0),
     rows_[1] - src.get_row(1));
 }
+
+Mat2::vec_type cglm::Mat2::operator[](unsigned int r) const {
+  if (0u > r || r > 1u)
+    throw cglm::OutOfRangeException();
+  else
+    return rows_[r];
+}
