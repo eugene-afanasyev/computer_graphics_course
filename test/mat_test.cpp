@@ -104,4 +104,25 @@ TEST_CASE("Mat2 binary arithmetic operations") {
     REQUIRE(glm_mat_result[1].x == mat_result[1].x);
     REQUIRE(glm_mat_result[1].y == mat_result[1].y);
   }
+
+  {
+    glm::mat2 glm_mat1({1, 3.13f},
+                       {11.1f, 4});
+    glm::mat2 glm_mat2({1, 2},
+                       {3.13f, 2.2f});
+
+    Mat2 mat1({1, 3.13f},
+              {11.1f, 4});
+
+    Mat2 mat2({1, 2},
+              {3.13f, 2.2f});
+
+    glm::mat2 glm_mat_result = glm_mat1 - glm_mat2;
+    Mat2 mat_result = mat1 - mat2;
+
+    REQUIRE(glm_mat_result[0].x == mat_result[0].x);
+    REQUIRE(glm_mat_result[0].y == mat_result[0].y);
+    REQUIRE(glm_mat_result[1].x == mat_result[1].x);
+    REQUIRE(glm_mat_result[1].y == mat_result[1].y);
+  }
 }
