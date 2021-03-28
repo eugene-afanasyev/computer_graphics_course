@@ -204,3 +204,25 @@ TEST_CASE("Mat2 multiplication on a Vec2") {
   REQUIRE(floatCmp(result.x, 1456.4f));
   REQUIRE(floatCmp(result.y, 4131.5996f));
 }
+
+TEST_CASE("Mat2 inverse matrix") {
+  {
+    Mat2 inverted_mat = Mat2({10, 14}, {12.2, 2}).GetInverse();
+    glm::mat2 glm_inverted_mat = glm::inverse(glm::mat2({10, 14}, {12.2, 2}));
+
+    REQUIRE(floatCmp(glm_inverted_mat[0].x, inverted_mat[0].x));
+    REQUIRE(floatCmp(glm_inverted_mat[0].y, inverted_mat[0].y));
+    REQUIRE(floatCmp(glm_inverted_mat[1].x, inverted_mat[1].x));
+    REQUIRE(floatCmp(glm_inverted_mat[1].y, inverted_mat[1].y));
+  }
+
+  {
+    Mat2 inverted_mat = Mat2({22.2, 12.4}, {11.9, 43.4}).GetInverse();
+    glm::mat2 glm_inverted_mat = glm::inverse(glm::mat2({22.2, 12.4}, {11.9, 43.4}));
+
+    REQUIRE(floatCmp(glm_inverted_mat[0].x, inverted_mat[0].x));
+    REQUIRE(floatCmp(glm_inverted_mat[0].y, inverted_mat[0].y));
+    REQUIRE(floatCmp(glm_inverted_mat[1].x, inverted_mat[1].x));
+    REQUIRE(floatCmp(glm_inverted_mat[1].y, inverted_mat[1].y));
+  }
+}
