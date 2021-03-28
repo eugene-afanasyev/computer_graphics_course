@@ -112,3 +112,11 @@ Mat2 cglm::Mat2::GetInverse() const {
 Mat2 cglm::Mat2::GetTransposed() const noexcept {
   return {{rows_[0].x, rows_[1].x}, {rows_[0].y, rows_[1].y}};
 }
+
+bool cglm::Mat2::operator==(const Mat2 &src) const noexcept {
+  return (rows_[0] == src.get_row(0) && rows_[1] == src.get_row(1));
+}
+
+bool cglm::Mat2::operator!=(const Mat2 &src) const noexcept {
+  return !(rows_[0] == src.get_row(0) && rows_[1] == src.get_row(1));
+}

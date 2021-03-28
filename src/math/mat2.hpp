@@ -40,6 +40,10 @@ class Mat2 {
   Mat2 GetInverse() const;
   Mat2 GetTransposed() const noexcept;
 
+  // -- Comparison methods --
+  bool operator==(const Mat2&) const noexcept;
+  bool operator!=(const Mat2&) const noexcept;
+
  private:
   vec_array rows_;
 };

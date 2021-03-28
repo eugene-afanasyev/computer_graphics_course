@@ -254,3 +254,33 @@ TEST_CASE("Mat2 transpose") {
     REQUIRE(floatCmp(glm_mat[1].y, mat[1].y));
   }
 }
+
+TEST_CASE("Mat2 comparison") {
+  {
+    Mat2 mat0;
+    Mat2 mat1(0);
+
+    REQUIRE(mat0 == mat1);
+  }
+
+  {
+    Mat2 mat0({10, 22}, {3.31, 97.2});
+    Mat2 mat1({10, 22}, {3.31, 97.2});
+
+    REQUIRE(mat0 == mat1);
+  }
+
+  {
+    Mat2 mat0(10);
+    Mat2 mat1(10);
+
+    REQUIRE(mat0 == mat1);
+  }
+
+  {
+    Mat2 mat0;
+    Mat2 mat1(10);
+
+    REQUIRE(mat0 != mat1);
+  }
+}
