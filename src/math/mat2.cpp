@@ -1,5 +1,6 @@
 #include "mat2.hpp"
 #include "exception.hpp"
+#include "utils.hpp"
 
 using Mat2 = cglm::Mat2;
 
@@ -94,4 +95,16 @@ cglm::Vec2 cglm::Mat2::operator*(const Mat2::vec_type &vec) const {
   float y = rows_[1].x * vec.x + rows_[1].y * vec.y;
 
   return {x, y};
+}
+
+Mat2 cglm::Mat2::GetInverse() const {
+  float det = (rows_[0].x * rows_[1].y) - (rows_[0].y * rows_[1].x);
+
+  if (cglm::IsFloatEqual(det, 0.0f))
+    throw cglm::NoInverseMatrixException();
+
+  Mat2 transposed_mat_of_adj({rows_[1].y, -rows_[0].y},
+                             {-rows_[1].x, rows_[0].x});
+
+  return transposed_mat_of_adj * (1.0f / det);
 }

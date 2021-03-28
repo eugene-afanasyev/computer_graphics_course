@@ -36,6 +36,9 @@ class Mat2 {
   Mat2 operator-(float) const;
   Vec2 operator*(const vec_type&) const;
 
+  // -- Matrix transformations --
+  Mat2 GetInverse() const;
+
  private:
   vec_array rows_;
 };

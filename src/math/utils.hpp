@@ -1,6 +1,8 @@
 #ifndef COMPUTER_GRAPHICS_COURSE_SRC_MATH_UTILS_HPP_
 #define COMPUTER_GRAPHICS_COURSE_SRC_MATH_UTILS_HPP_
 
+#include <cmath>
+
 namespace cglm {
 
 inline bool IsFloatEqual(float lhs, float rhs) {
