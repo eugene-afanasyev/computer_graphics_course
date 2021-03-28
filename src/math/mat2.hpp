@@ -21,8 +21,8 @@ class Mat2 {
   Mat2(const Mat2&) = default;
 
   // -- Access --
-  vec_type get_row(uint32_t r) const;  // access row
-  vec_type get_col(uint32_t c) const;  // access column
+  vec_type get_row(uint32_t r) const;
+  vec_type get_col(uint32_t c) const;
   vec_type get_diag() const noexcept;
   vec_type operator[](unsigned r) const;
 
@@ -34,6 +34,7 @@ class Mat2 {
   Mat2 operator/(float) const;
   Mat2 operator+(float) const;
   Mat2 operator-(float) const;
+  Vec2 operator*(const vec_type&) const;
 
  private:
   vec_array rows_;

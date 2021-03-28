@@ -117,6 +117,8 @@
       <workItem from="1616122411251" duration="14270000" />
       <workItem from="1616676168251" duration="2585000" />
       <workItem from="1616725614061" duration="9567000" />
+      <workItem from="1616860619118" duration="603000" />
+      <workItem from="1616935691609" duration="2033000" />
     </task>
     <task id="LOCAL-00001" summary="Vec2 constructors realised and covered with tests">
       <created>1615556676953</created>
@@ -398,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616769944859</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Mat2 sum and subtraction on a number implemented and covered with tests">
+      <created>1616771755100</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1616771755100</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +426,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="some tests fixes, Vec3 comparison implemented and covered with tests" />
     <MESSAGE value="Vec3 sum and subtraction implemented and covered with tests" />
     <MESSAGE value="vec3 multiplication and div on a number implemented and covered with tests" />
     <MESSAGE value="Vec3 completely implemented" />
@@ -442,7 +450,8 @@
     <MESSAGE value="Mat2 multiplication implemented and covered with tests" />
     <MESSAGE value="Mat2 multiplication on a num implemented and covered with tests" />
     <MESSAGE value="Mat2 division on a num implemented and covered with tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat2 division on a num implemented and covered with tests" />
+    <MESSAGE value="Mat2 sum and subtraction on a number implemented and covered with tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat2 sum and subtraction on a number implemented and covered with tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

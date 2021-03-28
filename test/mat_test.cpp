@@ -192,3 +192,15 @@ TEST_CASE("Mat2 sum and subtraction on a number") {
     REQUIRE(floatCmp(7.2f, mat[1].y));
   }
 }
+
+TEST_CASE("Mat2 multiplication on a Vec2") {
+  Mat2 mat({9, 12.2},
+           {23.3, 48});
+
+  Vec2 vec(132, 22);
+
+  Vec2 result = mat * vec;
+
+  REQUIRE(floatCmp(result.x, 1456.4f));
+  REQUIRE(floatCmp(result.y, 4131.5996f));
+}
