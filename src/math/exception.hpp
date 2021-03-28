@@ -5,9 +5,14 @@
 
 namespace cglm {
 
- class OutOfRangeException : public std::exception{
-  public:
-   const char * what() const noexcept override;
+class OutOfRangeException : public std::exception{
+ public:
+  const char * what() const noexcept override;
+};
+
+class NoInverseMatrixException : public std::exception {
+ public:
+  const char * what() const noexcept override;
 };
 
 }  // namespace cglm
