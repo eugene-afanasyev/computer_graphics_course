@@ -226,3 +226,31 @@ TEST_CASE("Mat2 inverse matrix") {
     REQUIRE(floatCmp(glm_inverted_mat[1].y, inverted_mat[1].y));
   }
 }
+
+TEST_CASE("Mat2 transpose") {
+  {
+    Mat2 mat({10, 12}, {14, 22});
+    glm::mat2 glm_mat({10, 12}, {14, 22});
+
+    mat = mat.GetTransposed();
+    glm_mat = glm::transpose(glm_mat);
+
+    REQUIRE(floatCmp(glm_mat[0].x, mat[0].x));
+    REQUIRE(floatCmp(glm_mat[0].y, mat[0].y));
+    REQUIRE(floatCmp(glm_mat[1].x, mat[1].x));
+    REQUIRE(floatCmp(glm_mat[1].y, mat[1].y));
+  }
+
+  {
+    Mat2 mat({23.31, 2}, {94.1, 54});
+    glm::mat2 glm_mat({23.31, 2}, {94.1, 54});
+
+    mat = mat.GetTransposed();
+    glm_mat = glm::transpose(glm_mat);
+
+    REQUIRE(floatCmp(glm_mat[0].x, mat[0].x));
+    REQUIRE(floatCmp(glm_mat[0].y, mat[0].y));
+    REQUIRE(floatCmp(glm_mat[1].x, mat[1].x));
+    REQUIRE(floatCmp(glm_mat[1].y, mat[1].y));
+  }
+}

@@ -108,3 +108,7 @@ Mat2 cglm::Mat2::GetInverse() const {
 
   return transposed_mat_of_adj * (1.0f / det);
 }
+
+Mat2 cglm::Mat2::GetTransposed() const noexcept {
+  return {{rows_[0].x, rows_[1].x}, {rows_[0].y, rows_[1].y}};
+}

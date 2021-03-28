@@ -17,7 +17,8 @@
   <component name="ChangeListManager">
     <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mat_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/mat2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/mat2.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat2.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +120,7 @@
       <workItem from="1616676168251" duration="2585000" />
       <workItem from="1616725614061" duration="9567000" />
       <workItem from="1616860619118" duration="603000" />
-      <workItem from="1616935691609" duration="5004000" />
+      <workItem from="1616935691609" duration="5755000" />
     </task>
     <task id="LOCAL-00001" summary="Vec2 constructors realised and covered with tests">
       <created>1615556676953</created>
@@ -429,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616939940232</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Mat2 GetInverse covered in tests">
+      <created>1616940951034</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1616940951034</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,7 +456,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Vec3 assignment operations covered with tests" />
     <MESSAGE value="Vec3 completely implemented and covered with tests" />
     <MESSAGE value="Vec4 constructors implemented and covered with tests" />
     <MESSAGE value="Vec4 move ctr and copy ctr implemented and covered with tests" />
@@ -473,7 +480,8 @@
     <MESSAGE value="Mat2 multiplication on a Vec2 implemented and covered with tests" />
     <MESSAGE value="defined NoInverseMatrixException" />
     <MESSAGE value="Mat2 GetInverse method defined" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat2 GetInverse method defined" />
+    <MESSAGE value="Mat2 GetInverse covered in tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat2 GetInverse covered in tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

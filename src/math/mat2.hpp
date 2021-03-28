@@ -38,6 +38,7 @@ class Mat2 {
 
   // -- Matrix transformations --
   Mat2 GetInverse() const;
+  Mat2 GetTransposed() const noexcept;
 
  private:
   vec_array rows_;
