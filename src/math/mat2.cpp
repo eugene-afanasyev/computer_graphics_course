@@ -4,6 +4,11 @@
 
 using Mat2 = cglm::Mat2;
 
+cglm::Mat2::Mat2() {
+  rows_[0] = {1, 0};
+  rows_[1] = {0, 1};
+}
+
 Mat2::Mat2(float v) {
   rows_[0].x = v;
   rows_[1].y = v;

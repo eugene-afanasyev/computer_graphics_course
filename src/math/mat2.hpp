@@ -12,7 +12,7 @@ class Mat2 {
   using vec_array = std::array<vec_type, 2>;
 
   // -- Constructors --
-  Mat2() = default;
+  Mat2();
   explicit Mat2(float);
   explicit Mat2(vec_type const& diag_vec);
   Mat2(float, float);
