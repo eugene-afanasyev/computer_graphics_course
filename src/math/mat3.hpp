@@ -18,6 +18,12 @@ class Mat3 {
   Mat3(float, float, float);
   Mat3(const vec_type& r0, const vec_type& r1, const vec_type& v2);
 
+  // -- Accessors --
+  vec_type get_row(uint32_t r) const;
+  vec_type get_col(uint32_t c) const;
+  vec_type get_diag() const noexcept;
+  vec_type operator[](unsigned r) const;
+
  private:
   vec_array rows_;
 };

@@ -1,4 +1,5 @@
 #include "mat3.hpp"
+#include "exception.hpp"
 
 using vec_type = cglm::Mat3::vec_type;
 
@@ -30,4 +31,34 @@ cglm::Mat3::Mat3(const vec_type& r0, const vec_type& r1, const vec_type& r2) {
   rows_[0] = r0;
   rows_[1] = r1;
   rows_[2] = r2;
+}
+
+vec_type cglm::Mat3::get_row(uint32_t r) const {
+  if (r < 0u || r > 2u)
+    throw cglm::OutOfRangeException();
+  else
+    return rows_[r];
+}
+
+vec_type cglm::Mat3::get_col(uint32_t c) const {
+  if (c < 0u || c > 2u)
+    throw cglm::OutOfRangeException();
+  else
+  if (c == 0)
+    return {rows_[0].x, rows_[1].x, rows_[2].x};
+  else if (c == 1)
+    return {rows_[0].y, rows_[1].y, rows_[2].y};
+  else
+    return {rows_[0].z, rows_[1].z, rows_[2].z};
+}
+
+vec_type cglm::Mat3::get_diag() const noexcept {
+  return {rows_[0].x, rows_[1].y, rows_[2].z};
+}
+
+vec_type cglm::Mat3::operator[](unsigned int r) const {
+  if (r < 0u || r > 2u)
+    throw cglm::OutOfRangeException();
+  else
+    return rows_[r];
 }
