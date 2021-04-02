@@ -7,9 +7,13 @@
 #include "catch.hpp"
 #include "../src/math/mat2.hpp"
 #include "../src/math/vec2.hpp"
+#include "../src/math/mat3.hpp"
+#include "../src/math/vec3.hpp"
 
 using Mat2 = cglm::Mat2;
 using Vec2 = cglm::Vec2;
+using Mat3 = cglm::Mat3;
+using Vec3 = cglm::Vec3;
 
 bool floatCmp(float a, float b) {
   return std::fabs(a - b) < 1e-5;
@@ -282,5 +286,102 @@ TEST_CASE("Mat2 comparison") {
     Mat2 mat1(10);
 
     REQUIRE(mat0 != mat1);
+  }
+}
+
+/// Mat3 test section
+
+TEST_CASE("Mat3 constructors and accessors") {
+  {
+    Mat3 mat;
+
+    REQUIRE(mat[0] == Vec3(1, 0, 0));
+    REQUIRE(mat[1] == Vec3(0, 1, 0));
+    REQUIRE(mat[2] == Vec3(0, 0, 1));
+
+    REQUIRE(mat.get_row(0) == Vec3(1, 0, 0));
+    REQUIRE(mat.get_row(1) == Vec3(0, 1, 0));
+    REQUIRE(mat.get_row(2) == Vec3(0, 0, 1));
+
+    REQUIRE(mat.get_col(0) == Vec3(1, 0, 0));
+    REQUIRE(mat.get_col(1) == Vec3(0, 1, 0));
+    REQUIRE(mat.get_col(2) == Vec3(0, 0, 1));
+
+    REQUIRE(mat.get_diag() == Vec3(1, 1, 1));
+  }
+
+  {
+    Mat3 mat(1.14);
+
+    REQUIRE(mat[0] == Vec3(1.14, 0, 0));
+    REQUIRE(mat[1] == Vec3(0, 1.14, 0));
+    REQUIRE(mat[2] == Vec3(0, 0, 1.14));
+
+    REQUIRE(mat.get_row(0) == Vec3(1.14, 0, 0));
+    REQUIRE(mat.get_row(1) == Vec3(0, 1.14, 0));
+    REQUIRE(mat.get_row(2) == Vec3(0, 0, 1.14));
+
+    REQUIRE(mat.get_col(0) == Vec3(1.14, 0, 0));
+    REQUIRE(mat.get_col(1) == Vec3(0, 1.14, 0));
+    REQUIRE(mat.get_col(2) == Vec3(0, 0, 1.14));
+
+    REQUIRE(mat.get_diag() == Vec3(1.14, 1.14, 1.14));
+  }
+
+  {
+    Mat3 mat(Vec3(1.14, 12.22, 99.3));
+
+    REQUIRE(mat[0] == Vec3(1.14, 0, 0));
+    REQUIRE(mat[1] == Vec3(0, 12.22, 0));
+    REQUIRE(mat[2] == Vec3(0, 0, 99.3));
+
+    REQUIRE(mat.get_row(0) == Vec3(1.14, 0, 0));
+    REQUIRE(mat.get_row(1) == Vec3(0, 12.22, 0));
+    REQUIRE(mat.get_row(2) == Vec3(0, 0, 99.3));
+
+    REQUIRE(mat.get_col(0) == Vec3(1.14, 0, 0));
+    REQUIRE(mat.get_col(1) == Vec3(0, 12.22, 0));
+    REQUIRE(mat.get_col(2) == Vec3(0, 0, 99.3));
+
+    REQUIRE(mat.get_diag() == Vec3(1.14, 12.22, 99.3));
+  }
+
+  {
+    Mat3 mat(1.14, 12.22, 99.3);
+
+    REQUIRE(mat[0] == Vec3(1.14, 0, 0));
+    REQUIRE(mat[1] == Vec3(0, 12.22, 0));
+    REQUIRE(mat[2] == Vec3(0, 0, 99.3));
+
+    REQUIRE(mat.get_row(0) == Vec3(1.14, 0, 0));
+    REQUIRE(mat.get_row(1) == Vec3(0, 12.22, 0));
+    REQUIRE(mat.get_row(2) == Vec3(0, 0, 99.3));
+
+    REQUIRE(mat.get_col(0) == Vec3(1.14, 0, 0));
+    REQUIRE(mat.get_col(1) == Vec3(0, 12.22, 0));
+    REQUIRE(mat.get_col(2) == Vec3(0, 0, 99.3));
+
+    REQUIRE(mat.get_diag() == Vec3(1.14, 12.22, 99.3));
+  }
+
+  {
+    Mat3 mat(
+      {1.14, 0, 0},
+      {0, 12.22, 0},
+      {0, 0, 99.3});
+
+    REQUIRE(mat[0] == Vec3(1.14, 0, 0));
+    REQUIRE(mat[1] == Vec3(0, 12.22, 0));
+    REQUIRE(mat[2] == Vec3(0, 0, 99.3));
+
+    REQUIRE(mat.get_row(0) == Vec3(1.14, 0, 0));
+    REQUIRE(mat.get_row(1) == Vec3(0, 12.22, 0));
+    REQUIRE(mat.get_row(2) == Vec3(0, 0, 99.3));
+
+    REQUIRE(mat.get_col(0) == Vec3(1.14, 0, 0));
+    REQUIRE(mat.get_col(1) == Vec3(0, 12.22, 0));
+    REQUIRE(mat.get_col(2) == Vec3(0, 0, 99.3));
+
+    REQUIRE(mat.get_diag() == Vec3(1.14, 12.22, 99.3));
   }
 }

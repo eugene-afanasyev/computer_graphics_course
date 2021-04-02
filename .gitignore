@@ -2,4 +2,4 @@ readme.md
 # Project exclude paths
 /cmake-build-debug/
 
-/.idea/workspace.xml
+/.idea

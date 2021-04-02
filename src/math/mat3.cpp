@@ -42,7 +42,7 @@ vec_type cglm::Mat3::get_row(uint32_t r) const {
 
 vec_type cglm::Mat3::get_col(uint32_t c) const {
   if (c < 0u || c > 2u)
-    throw cglm::OutOfRangeException();
+  throw cglm::OutOfRangeException();
   else
   if (c == 0)
     return {rows_[0].x, rows_[1].x, rows_[2].x};

@@ -16,11 +16,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/math/mat3.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/math/mat3.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/mat3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat3.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/mat_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +28,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-Coverage" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -133,14 +130,7 @@
       <workItem from="1617090600228" duration="2217000" />
       <workItem from="1617094067576" duration="50000" />
       <workItem from="1617257991838" duration="152000" />
-      <workItem from="1617359374021" duration="3282000" />
-    </task>
-    <task id="LOCAL-00001" summary="Vec2 constructors realised and covered with tests">
-      <created>1615556676953</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1615556676953</updated>
+      <workItem from="1617359374021" duration="5147000" />
     </task>
     <task id="LOCAL-00002" summary="Vec2 copy and move constructors realised and covered with tests">
       <created>1615557033561</created>
@@ -478,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617371457067</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Mat3 accessors defined">
+      <created>1617371751922</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1617371751923</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +494,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Vec4 sum and subtraction implemented and covered with tests" />
     <MESSAGE value="Vec4 multiplication and div on a number implemented and covered with tests" />
     <MESSAGE value="Vec4 assignment sum and subtraction implemented and covered with tests" />
     <MESSAGE value="Vec4 assignment multiplication and div on a num implemented and covered with tests" />
@@ -522,9 +518,11 @@
     <MESSAGE value="Mat2 comparison methods defined and covered in tests" />
     <MESSAGE value="changed Mat2 default constructor, fixed corresponding tests" />
     <MESSAGE value="Mat3 defined constructors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat3 defined constructors" />
+    <MESSAGE value="Mat3 accessors defined" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat3 accessors defined" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1617373302474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
