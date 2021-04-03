@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN
 
 #include <glm/mat2x2.hpp>
+#include <glm/mat3x3.hpp>
 #include <glm/ext/vector_int1.hpp>
 #include <glm/ext/scalar_common.hpp>
 #include <iostream>
@@ -383,5 +384,22 @@ TEST_CASE("Mat3 constructors and accessors") {
     REQUIRE(mat.get_col(2) == Vec3(0, 0, 99.3));
 
     REQUIRE(mat.get_diag() == Vec3(1.14, 12.22, 99.3));
+  }
+}
+
+TEST_CASE("Mat3 addition") {
+  {
+    Mat3 mat0(3);
+    Mat3 mat1(0.14f);
+
+    glm::mat3 glm_mat0(3);
+    glm::mat3 glm_mat1(0.14f);
+
+    Mat3 mat_result = mat0 + mat1;
+    glm::mat3 glm_mat_result = glm_mat0 + glm_mat1;
+
+    REQUIRE(mat_result[0].x == glm_mat_result[0].x);
+    REQUIRE(mat_result[1].y == glm_mat_result[1].y);
+    REQUIRE(mat_result[2].z == glm_mat_result[2].z);
   }
 }

@@ -18,6 +18,7 @@
     <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math/mat3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/mat3.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat3.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/mat_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,11 +75,6 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.computer_graphics_course">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Pattern" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="computer_graphics_course" TARGET_NAME="computer_graphics_course" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="computer_graphics_course" RUN_TARGET_NAME="computer_graphics_course" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -130,14 +126,8 @@
       <workItem from="1617090600228" duration="2217000" />
       <workItem from="1617094067576" duration="50000" />
       <workItem from="1617257991838" duration="152000" />
-      <workItem from="1617359374021" duration="5147000" />
-    </task>
-    <task id="LOCAL-00002" summary="Vec2 copy and move constructors realised and covered with tests">
-      <created>1615557033561</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1615557033561</updated>
+      <workItem from="1617359374021" duration="6655000" />
+      <workItem from="1617414856962" duration="901000" />
     </task>
     <task id="LOCAL-00003" summary="Vec2 comparison methods implemented and covered with tests">
       <created>1615557764489</created>
@@ -475,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617371751923</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Mat3 constructors and accessors covered in tests">
+      <created>1617373657981</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1617373657981</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +491,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Vec4 multiplication and div on a number implemented and covered with tests" />
     <MESSAGE value="Vec4 assignment sum and subtraction implemented and covered with tests" />
     <MESSAGE value="Vec4 assignment multiplication and div on a num implemented and covered with tests" />
     <MESSAGE value="Vec4 length, scalar multiplication and norm implemented and covered with tests" />
@@ -519,10 +515,10 @@
     <MESSAGE value="changed Mat2 default constructor, fixed corresponding tests" />
     <MESSAGE value="Mat3 defined constructors" />
     <MESSAGE value="Mat3 accessors defined" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat3 accessors defined" />
+    <MESSAGE value="Mat3 constructors and accessors covered in tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat3 constructors and accessors covered in tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1617373302474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
