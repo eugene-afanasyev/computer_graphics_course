@@ -492,3 +492,21 @@ TEST_CASE("Mat3 number addition") {
   REQUIRE(mat_result[2].y == 58);
   REQUIRE(mat_result[2].z == 15);
 }
+
+TEST_CASE("Mat3 number subtraction") {
+  Mat3 mat0({10, 4, 3},
+            {18, 14, 29},
+            {48, 44, 1});
+
+  Mat3 mat_result = mat0 - 20;
+
+  REQUIRE(mat_result[0].x == -10);
+  REQUIRE(mat_result[0].y == -16);
+  REQUIRE(mat_result[0].z == -17);
+  REQUIRE(mat_result[1].x == -2);
+  REQUIRE(mat_result[1].y == -6);
+  REQUIRE(mat_result[1].z == 9);
+  REQUIRE(mat_result[2].x == 28);
+  REQUIRE(mat_result[2].y == 24);
+  REQUIRE(mat_result[2].z == -19);
+}

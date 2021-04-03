@@ -33,6 +33,7 @@ class Mat3 {
   Mat3 operator*(float) const;
   Mat3 operator/(float) const;
   Mat3 operator+(float) const;
+  Mat3 operator-(float) const;
 
  private:
   vec_array rows_;
