@@ -68,3 +68,9 @@ cglm::Mat3 cglm::Mat3::operator+(const cglm::Mat3 &src) const {
           rows_[1] + src.get_row(1),
           rows_[2] + src.get_row(2)};
 }
+
+cglm::Mat3 cglm::Mat3::operator-(const cglm::Mat3 &src) const {
+  return {rows_[0] - src.get_row(0),
+          rows_[1] - src.get_row(1),
+          rows_[2] - src.get_row(2)};
+}
