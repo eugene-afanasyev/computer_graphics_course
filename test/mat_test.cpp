@@ -475,4 +475,20 @@ TEST_CASE("Mat3 division on a number") {
   REQUIRE(mat_result[2].z == 0.5);
 }
 
+TEST_CASE("Mat3 number addition") {
+  Mat3 mat0({10, 4, 3},
+            {18, 14, 29},
+            {48, 44, 1});
 
+  Mat3 mat_result = mat0 + 14;
+
+  REQUIRE(mat_result[0].x == 24);
+  REQUIRE(mat_result[0].y == 18);
+  REQUIRE(mat_result[0].z == 17);
+  REQUIRE(mat_result[1].x == 32);
+  REQUIRE(mat_result[1].y == 28);
+  REQUIRE(mat_result[1].z == 43);
+  REQUIRE(mat_result[2].x == 62);
+  REQUIRE(mat_result[2].y == 58);
+  REQUIRE(mat_result[2].z == 15);
+}

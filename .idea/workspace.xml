@@ -128,14 +128,7 @@
       <workItem from="1617257991838" duration="152000" />
       <workItem from="1617359374021" duration="6655000" />
       <workItem from="1617414856962" duration="5079000" />
-      <workItem from="1617434954856" duration="1283000" />
-    </task>
-    <task id="LOCAL-00008" summary="Vec2 assignment addition and subtraction covered with tests">
-      <created>1615605176534</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1615605176534</updated>
+      <workItem from="1617434954856" duration="2003000" />
     </task>
     <task id="LOCAL-00009" summary="Vec2 assignment multiplication and division covered with tests">
       <created>1615605773399</created>
@@ -473,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617435393550</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Mat3 division on a num definition and test coverage">
+      <created>1617436465094</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1617436465094</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +492,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added exception.hpp" />
     <MESSAGE value="Mat2 constructors an accessors implemented and covered with tests" />
     <MESSAGE value="Mat2: added and tested new constructor" />
     <MESSAGE value="Mat2 sum implemented and covered with tests" />
@@ -517,7 +516,8 @@
     <MESSAGE value="Mat3 multiplication defined and covered in tests" />
     <MESSAGE value="Mat3 scalar multiplication defined" />
     <MESSAGE value="Mat3 multiplication on a num test coverage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat3 multiplication on a num test coverage" />
+    <MESSAGE value="Mat3 division on a num definition and test coverage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat3 division on a num definition and test coverage" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
