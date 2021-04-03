@@ -156,3 +156,17 @@ cglm::Mat3 cglm::Mat3::GetTransposed() const noexcept {
           get_col(1),
           get_col(2)};
 }
+
+bool cglm::Mat3::operator==(const Mat3 &src) const noexcept {
+  return (
+    rows_[0] == src[0] &&
+    rows_[1] == src[1] &&
+    rows_[2] == src[2]);
+}
+
+bool cglm::Mat3::operator!=(const cglm::Mat3 &src) const noexcept {
+  return !(
+    rows_[0] == src[0] &&
+    rows_[1] == src[1] &&
+    rows_[2] == src[2]);
+}

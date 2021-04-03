@@ -555,3 +555,43 @@ TEST_CASE("Mat3 transpose") {
   REQUIRE(mat[1] == Vec3(2, 1, 6));
   REQUIRE(mat[2] == Vec3(3, 4, 0));
 }
+
+TEST_CASE("Mat3 comparison methods") {
+  {
+    Mat3 mat0({1, 2, 3},
+             {0, 1, 4},
+             {5, 6, 0});
+
+    Mat3 mat1({1, 2, 3},
+             {0, 1, 4},
+             {5, 6, 0});
+
+    REQUIRE(mat0 == mat1);
+  }
+
+  {
+    Mat3 mat0;
+    Mat3 mat1;
+
+    REQUIRE(mat0 == mat1);
+  }
+
+  {
+    Mat3 mat0({0, 2, 3},
+              {0, 1, 4},
+              {0, 6, 0});
+
+    Mat3 mat1({1, 2, 3},
+              {0, 1, 4},
+              {5, 6, 0});
+
+    REQUIRE(mat0 != mat1);
+  }
+
+  {
+    Mat3 mat0(10);
+    Mat3 mat1(12);
+
+    REQUIRE(mat0 != mat1);
+  }
+}

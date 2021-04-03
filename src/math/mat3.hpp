@@ -41,6 +41,10 @@ class Mat3 {
   Mat3 GetInverse() const;
   Mat3 GetTransposed() const noexcept;
 
+  // -- Comparison methods --
+  bool operator==(const Mat3&) const noexcept;
+  bool operator!=(const Mat3&) const noexcept;
+
  private:
   vec_array rows_;
 };
