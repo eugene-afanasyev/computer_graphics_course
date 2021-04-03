@@ -125,3 +125,6 @@ bool cglm::Mat2::operator==(const Mat2 &src) const noexcept {
 bool cglm::Mat2::operator!=(const Mat2 &src) const noexcept {
   return !(rows_[0] == src.get_row(0) && rows_[1] == src.get_row(1));
 }
+float cglm::Mat2::det() const noexcept {
+  return (rows_[0].x * rows_[1].y) - (rows_[0].y * rows_[1].x);;
+}

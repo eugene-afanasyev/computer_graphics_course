@@ -25,6 +25,7 @@ class Mat2 {
   vec_type get_col(uint32_t c) const;
   vec_type get_diag() const noexcept;
   vec_type operator[](unsigned r) const;
+  inline float det() const noexcept;
 
   // -- Binary arithmetic operations --
   Mat2 operator+(const Mat2&) const;
