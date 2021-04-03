@@ -31,6 +31,7 @@ class Mat3 {
 
   // -- Scalar arithmetic operations --
   Mat3 operator*(float) const;
+  Mat3 operator/(float) const;
 
  private:
   vec_array rows_;

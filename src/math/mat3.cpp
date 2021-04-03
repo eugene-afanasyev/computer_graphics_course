@@ -94,3 +94,9 @@ cglm::Mat3 cglm::Mat3::operator*(float v) const {
           {rows_[1] * v},
           {rows_[2] * v}};
 }
+
+cglm::Mat3 cglm::Mat3::operator/(float v) const {
+  return {{rows_[0] / v},
+          {rows_[1] / v},
+          {rows_[2] / v}};
+}
