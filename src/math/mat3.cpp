@@ -116,3 +116,9 @@ cglm::Mat3 cglm::Mat3::operator-(float v) const {
 
   return {r0, r1, r2};
 }
+
+cglm::Vec3 cglm::Mat3::operator*(const vec_type &src) {
+  return {rows_[0] * src,
+          rows_[1] * src,
+          rows_[2] * src};
+}

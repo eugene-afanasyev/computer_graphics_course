@@ -16,6 +16,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/mat3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat3.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math/mat3.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat3.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/mat_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
     </list>
@@ -126,21 +128,7 @@
       <workItem from="1617257991838" duration="152000" />
       <workItem from="1617359374021" duration="6655000" />
       <workItem from="1617414856962" duration="5079000" />
-      <workItem from="1617434954856" duration="2484000" />
-    </task>
-    <task id="LOCAL-00010" summary="Vec3 init, copy and move constructors implemented and covered with tests">
-      <created>1615625237343</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1615625237343</updated>
-    </task>
-    <task id="LOCAL-00011" summary="fixed Vec3 move ctr tests">
-      <created>1615625310168</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1615625310168</updated>
+      <workItem from="1617434954856" duration="3190000" />
     </task>
     <task id="LOCAL-00012" summary="some tests fixes, Vec3 comparison implemented and covered with tests">
       <created>1615626051379</created>
@@ -471,7 +459,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617437136469</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="cglm::Mat3::operator-(float) definition and test coverage">
+      <created>1617437501051</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1617437501051</updated>
+    </task>
+    <task id="LOCAL-00060" summary="cglm::Mat3::operator-(float) definition">
+      <created>1617437583305</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1617437583305</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,8 +492,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mat2: added and tested new constructor" />
-    <MESSAGE value="Mat2 sum implemented and covered with tests" />
     <MESSAGE value="Mat2 indexing subscript operator implemented and covered with tests" />
     <MESSAGE value="Mat2 subtraction implemented and covered with tests" />
     <MESSAGE value="Mat2 multiplication implemented and covered with tests" />
@@ -515,7 +515,9 @@
     <MESSAGE value="Mat3 multiplication on a num test coverage" />
     <MESSAGE value="Mat3 division on a num definition and test coverage" />
     <MESSAGE value="Mat::operator+(float) definition and test coverage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat::operator+(float) definition and test coverage" />
+    <MESSAGE value="cglm::Mat3::operator-(float) definition and test coverage" />
+    <MESSAGE value="cglm::Mat3::operator-(float) definition" />
+    <option name="LAST_COMMIT_MESSAGE" value="cglm::Mat3::operator-(float) definition" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

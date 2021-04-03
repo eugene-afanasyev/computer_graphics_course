@@ -510,3 +510,24 @@ TEST_CASE("Mat3 number subtraction") {
   REQUIRE(mat_result[2].y == 24);
   REQUIRE(mat_result[2].z == -19);
 }
+
+TEST_CASE("Mat3 multiplication on a vector") {
+  Mat3 mat({1, 225, 4},
+           {9, 95, 23},
+           {33, 14, 4});
+
+  Vec3 vec(3, 4, 8);
+
+  vec = mat * vec;
+
+  glm::mat3 glm_mat({1, 9, 33},
+                    {225, 95, 14},
+                    {4, 23, 4});
+  glm::vec3 glm_vec(3, 4, 8);
+
+  glm_vec = glm::operator*(glm_mat, glm_vec);
+
+  REQUIRE(vec.x == glm_vec.x);
+  REQUIRE(vec.y == glm_vec.y);
+  REQUIRE(vec.z == glm_vec.z);
+}
