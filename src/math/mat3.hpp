@@ -35,7 +35,10 @@ class Mat3 {
   Mat3 operator+(float) const;
   Mat3 operator-(float) const;
 
-  Vec3 operator*(const vec_type&);
+  Vec3 operator*(const vec_type&) const;
+
+  // -- Matrix transformations --
+  Mat3 GetInverse() const;
 
  private:
   vec_array rows_;

@@ -128,21 +128,7 @@
       <workItem from="1617257991838" duration="152000" />
       <workItem from="1617359374021" duration="6655000" />
       <workItem from="1617414856962" duration="5079000" />
-      <workItem from="1617434954856" duration="3190000" />
-    </task>
-    <task id="LOCAL-00012" summary="some tests fixes, Vec3 comparison implemented and covered with tests">
-      <created>1615626051379</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1615626051379</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Vec3 sum and subtraction implemented and covered with tests">
-      <created>1615632844809</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1615632844809</updated>
+      <workItem from="1617434954856" duration="7671000" />
     </task>
     <task id="LOCAL-00014" summary="vec3 multiplication and div on a number implemented and covered with tests">
       <created>1615732383839</created>
@@ -473,7 +459,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617437583305</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Mat3 multiplication on a vector definition and test coverage">
+      <created>1617438291356</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1617438291356</updated>
+    </task>
+    <task id="LOCAL-00062" summary="cglm::Mat2 determinant method defined">
+      <created>1617442401068</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1617442401068</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,8 +492,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mat2 indexing subscript operator implemented and covered with tests" />
-    <MESSAGE value="Mat2 subtraction implemented and covered with tests" />
     <MESSAGE value="Mat2 multiplication implemented and covered with tests" />
     <MESSAGE value="Mat2 multiplication on a num implemented and covered with tests" />
     <MESSAGE value="Mat2 division on a num implemented and covered with tests" />
@@ -517,7 +515,9 @@
     <MESSAGE value="Mat::operator+(float) definition and test coverage" />
     <MESSAGE value="cglm::Mat3::operator-(float) definition and test coverage" />
     <MESSAGE value="cglm::Mat3::operator-(float) definition" />
-    <option name="LAST_COMMIT_MESSAGE" value="cglm::Mat3::operator-(float) definition" />
+    <MESSAGE value="Mat3 multiplication on a vector definition and test coverage" />
+    <MESSAGE value="cglm::Mat2 determinant method defined" />
+    <option name="LAST_COMMIT_MESSAGE" value="cglm::Mat2 determinant method defined" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

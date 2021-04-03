@@ -531,3 +531,15 @@ TEST_CASE("Mat3 multiplication on a vector") {
   REQUIRE(vec.y == glm_vec.y);
   REQUIRE(vec.z == glm_vec.z);
 }
+
+TEST_CASE("Mat3 inverse") {
+  Mat3 mat({1, 2, 3},
+           {0, 1, 4},
+           {5, 6, 0});
+
+  mat = mat.GetInverse();
+
+  REQUIRE(mat[0] == Vec3(-24, 18, 5));
+  REQUIRE(mat[1] == Vec3(20, -15, -4));
+  REQUIRE(mat[2] == Vec3(-5, 4, 1));
+}

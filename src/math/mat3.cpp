@@ -1,5 +1,6 @@
 #include "mat3.hpp"
 #include "exception.hpp"
+#include "vec2.hpp"
 
 using vec_type = cglm::Mat3::vec_type;
 
@@ -117,8 +118,29 @@ cglm::Mat3 cglm::Mat3::operator-(float v) const {
   return {r0, r1, r2};
 }
 
-cglm::Vec3 cglm::Mat3::operator*(const vec_type &src) {
+cglm::Vec3 cglm::Mat3::operator*(const vec_type &src) const {
   return {rows_[0] * src,
           rows_[1] * src,
           rows_[2] * src};
+}
+
+cglm::Mat3 cglm::Mat3::GetInverse() const {
+  float inv_det = 1 /
+    (rows_[0].x * (rows_[1].y * rows_[2].z - rows_[1].z * rows_[2].y) -
+    rows_[0].y * (rows_[1].x * rows_[2].z - rows_[2].x * rows_[1].z) +
+    rows_[0].z * (rows_[1].x * rows_[2].y - rows_[1].y * rows_[2].x));
+
+  vec_type row0(rows_[1].y * rows_[2].z - rows_[2].y * rows_[1].z,
+                rows_[0].z * rows_[2].y - rows_[0].y * rows_[2].z,
+                rows_[0].y * rows_[1].z - rows_[0].z * rows_[1].y);
+
+  vec_type row1(rows_[1].z * rows_[2].x - rows_[1].x * rows_[2].z,
+                rows_[0].x * rows_[2].z - rows_[0].z * rows_[2].x,
+                rows_[1].x * rows_[0].z - rows_[0].x * rows_[1].z);
+
+  vec_type row2(rows_[1].x * rows_[2].y - rows_[2].x * rows_[1].y,
+                rows_[2].x * rows_[0].y - rows_[0].x * rows_[2].y,
+                rows_[0].x * rows_[1].y - rows_[1].x * rows_[0].y);
+
+  return Mat3(row0, row1, row2) * inv_det;
 }
