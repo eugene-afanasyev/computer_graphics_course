@@ -418,25 +418,42 @@ TEST_CASE("Mat3 subtraction") {
 }
 
 TEST_CASE("Mat3 multiplication") {
-  {
-    Mat3 mat0({10, 4, 3},
-              {18.2, 14, 29},
-              {48, 44, 1});
+  Mat3 mat0({10, 4, 3},
+            {18.2, 14, 29},
+            {48, 44, 1});
 
-    Mat3 mat1({12, 33, 38},
-              {58, 32.5, 32 },
-              {13, 11, 2});
+  Mat3 mat1({12, 33, 38},
+            {58, 32.5, 32 },
+            {13, 11, 2});
 
-    Mat3 mat_result = mat0 * mat1;
+  Mat3 mat_result = mat0 * mat1;
 
-    REQUIRE(mat_result[0].x == 391);
-    REQUIRE(mat_result[0].y == 493);
-    REQUIRE(mat_result[0].z == 514);
-    REQUIRE(floatCmp(mat_result[1].x, 1407.4));
-    REQUIRE(floatCmp(mat_result[1].y, 1374.6));
-    REQUIRE(floatCmp(mat_result[1].z, 1197.6));
-    REQUIRE(mat_result[2].x == 3141);
-    REQUIRE(mat_result[2].y == 3025);
-    REQUIRE(mat_result[2].z == 3234);
-  }
+  REQUIRE(mat_result[0].x == 391);
+  REQUIRE(mat_result[0].y == 493);
+  REQUIRE(mat_result[0].z == 514);
+  REQUIRE(floatCmp(mat_result[1].x, 1407.4));
+  REQUIRE(floatCmp(mat_result[1].y, 1374.6));
+  REQUIRE(floatCmp(mat_result[1].z, 1197.6));
+  REQUIRE(mat_result[2].x == 3141);
+  REQUIRE(mat_result[2].y == 3025);
+  REQUIRE(mat_result[2].z == 3234);
 }
+
+TEST_CASE("Mat3 multiplication on a number") {
+  Mat3 mat0({10, 4, 3},
+            {18.2, 14, 29},
+            {48, 44, 1});
+
+  Mat3 mat_result = mat0 * 10;
+
+  REQUIRE(mat_result[0].x == 100);
+  REQUIRE(mat_result[0].y == 40);
+  REQUIRE(mat_result[0].z == 30);
+  REQUIRE(mat_result[1].x == 182);
+  REQUIRE(mat_result[1].y == 140);
+  REQUIRE(mat_result[1].z == 290);
+  REQUIRE(mat_result[2].x == 480);
+  REQUIRE(mat_result[2].y == 440);
+  REQUIRE(mat_result[2].z == 10);
+}
+

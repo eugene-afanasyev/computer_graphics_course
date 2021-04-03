@@ -15,7 +15,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="" />
+    <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mat_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,11 +79,6 @@
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="computer_graphics_course" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="computer_graphics_course" TARGET_NAME="computer_graphics_course" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="computer_graphics_course" RUN_TARGET_NAME="computer_graphics_course">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -127,14 +125,8 @@
       <workItem from="1617094067576" duration="50000" />
       <workItem from="1617257991838" duration="152000" />
       <workItem from="1617359374021" duration="6655000" />
-      <workItem from="1617414856962" duration="4310000" />
-    </task>
-    <task id="LOCAL-00006" summary="Vec2 multiplication and division on scalar implemented and covered">
-      <created>1615597400158</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1615597400158</updated>
+      <workItem from="1617414856962" duration="5079000" />
+      <workItem from="1617434954856" duration="346000" />
     </task>
     <task id="LOCAL-00007" summary="Vec2 multiplication and division on scalar implemented and covered">
       <created>1615603349703</created>
@@ -472,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617419996021</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Mat3 scalar multiplication defined">
+      <created>1617420915104</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1617420915104</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +490,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="custom gl math library wrapped in a namespace" />
     <MESSAGE value="important fixes, refactoring work" />
     <MESSAGE value="added exception.hpp" />
     <MESSAGE value="Mat2 constructors an accessors implemented and covered with tests" />
@@ -516,9 +514,11 @@
     <MESSAGE value="Mat3 addition defined and covered in tests" />
     <MESSAGE value="Mat3 subtraction defined and covered in tests" />
     <MESSAGE value="Mat3 multiplication defined and covered in tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat3 multiplication defined and covered in tests" />
+    <MESSAGE value="Mat3 scalar multiplication defined" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat3 scalar multiplication defined" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1617435002884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
