@@ -74,3 +74,17 @@ cglm::Mat3 cglm::Mat3::operator-(const cglm::Mat3 &src) const {
           rows_[1] - src.get_row(1),
           rows_[2] - src.get_row(2)};
 }
+
+cglm::Mat3 cglm::Mat3::operator*(const cglm::Mat3 &src) const {
+  vec_type row0(this->get_row(0) * src.get_col(0),
+                this->get_row(0) * src.get_col(1),
+                this->get_row(0) * src.get_col(2));
+  vec_type row1(this->get_row(1) * src.get_col(0),
+                this->get_row(1) * src.get_col(1),
+                this->get_row(1) * src.get_col(2));
+  vec_type row2(this->get_row(2) * src.get_col(0),
+                this->get_row(2) * src.get_col(1),
+                this->get_row(2) * src.get_col(2));
+
+  return {row0, row1, row2};
+}

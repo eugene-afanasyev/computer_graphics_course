@@ -27,6 +27,7 @@ class Mat3 {
   // -- Binary arithmetic operations --
   Mat3 operator+(const Mat3&) const;
   Mat3 operator-(const Mat3&) const;
+  Mat3 operator*(const Mat3&) const;
 
  private:
   vec_array rows_;

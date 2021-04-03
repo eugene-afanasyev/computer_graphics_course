@@ -17,7 +17,7 @@ using Mat3 = cglm::Mat3;
 using Vec3 = cglm::Vec3;
 
 bool floatCmp(float a, float b) {
-  return std::fabs(a - b) < 1e-5;
+  return std::fabs(a - b) < 1e-3;
 }
 
 TEST_CASE("Mat2 constructors and accessors") {
@@ -415,4 +415,28 @@ TEST_CASE("Mat3 subtraction") {
   REQUIRE(mat_result[0].x == glm_mat_result[0].x);
   REQUIRE(mat_result[1].y == glm_mat_result[1].y);
   REQUIRE(mat_result[2].z == glm_mat_result[2].z);
+}
+
+TEST_CASE("Mat3 multiplication") {
+  {
+    Mat3 mat0({10, 4, 3},
+              {18.2, 14, 29},
+              {48, 44, 1});
+
+    Mat3 mat1({12, 33, 38},
+              {58, 32.5, 32 },
+              {13, 11, 2});
+
+    Mat3 mat_result = mat0 * mat1;
+
+    REQUIRE(mat_result[0].x == 391);
+    REQUIRE(mat_result[0].y == 493);
+    REQUIRE(mat_result[0].z == 514);
+    REQUIRE(floatCmp(mat_result[1].x, 1407.4));
+    REQUIRE(floatCmp(mat_result[1].y, 1374.6));
+    REQUIRE(floatCmp(mat_result[1].z, 1197.6));
+    REQUIRE(mat_result[2].x == 3141);
+    REQUIRE(mat_result[2].y == 3025);
+    REQUIRE(mat_result[2].z == 3234);
+  }
 }
