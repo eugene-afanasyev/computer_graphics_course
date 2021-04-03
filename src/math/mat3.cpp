@@ -108,3 +108,11 @@ cglm::Mat3 cglm::Mat3::operator+(float v) const {
 
   return {r0, r1, r2};
 }
+
+cglm::Mat3 cglm::Mat3::operator-(float v) const {
+  vec_type r0(rows_[0].x - v, rows_[0].y - v, rows_[0].z - v);
+  vec_type r1(rows_[1].x - v, rows_[1].y - v, rows_[1].z - v);
+  vec_type r2(rows_[2].x - v, rows_[2].y - v, rows_[2].z - v);
+
+  return {r0, r1, r2};
+}
