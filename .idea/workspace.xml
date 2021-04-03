@@ -15,13 +15,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/mat3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat3.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/mat3.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat3.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mat_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,14 +127,7 @@
       <workItem from="1617094067576" duration="50000" />
       <workItem from="1617257991838" duration="152000" />
       <workItem from="1617359374021" duration="6655000" />
-      <workItem from="1617414856962" duration="3927000" />
-    </task>
-    <task id="LOCAL-00005" summary="Vec2 scalar production implemented and covered with tests">
-      <created>1615560165496</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1615560165496</updated>
+      <workItem from="1617414856962" duration="4310000" />
     </task>
     <task id="LOCAL-00006" summary="Vec2 multiplication and division on scalar implemented and covered">
       <created>1615597400158</created>
@@ -478,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617416154265</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Mat3 multiplication defined and covered in tests">
+      <created>1617419996021</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1617419996021</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +491,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Vec4 length, scalar multiplication and norm implemented and covered with tests" />
     <MESSAGE value="custom gl math library wrapped in a namespace" />
     <MESSAGE value="important fixes, refactoring work" />
     <MESSAGE value="added exception.hpp" />
@@ -522,7 +515,8 @@
     <MESSAGE value="Mat3 constructors and accessors covered in tests" />
     <MESSAGE value="Mat3 addition defined and covered in tests" />
     <MESSAGE value="Mat3 subtraction defined and covered in tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat3 subtraction defined and covered in tests" />
+    <MESSAGE value="Mat3 multiplication defined and covered in tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat3 multiplication defined and covered in tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
