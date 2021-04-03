@@ -39,6 +39,7 @@ class Mat3 {
 
   // -- Matrix transformations --
   Mat3 GetInverse() const;
+  Mat3 GetTransposed() const noexcept;
 
  private:
   vec_array rows_;

@@ -1,6 +1,7 @@
 #include "mat3.hpp"
 #include "exception.hpp"
 #include "vec2.hpp"
+#include "utils.hpp"
 
 using vec_type = cglm::Mat3::vec_type;
 
@@ -125,10 +126,15 @@ cglm::Vec3 cglm::Mat3::operator*(const vec_type &src) const {
 }
 
 cglm::Mat3 cglm::Mat3::GetInverse() const {
-  float inv_det = 1 /
+  float det =
     (rows_[0].x * (rows_[1].y * rows_[2].z - rows_[1].z * rows_[2].y) -
     rows_[0].y * (rows_[1].x * rows_[2].z - rows_[2].x * rows_[1].z) +
     rows_[0].z * (rows_[1].x * rows_[2].y - rows_[1].y * rows_[2].x));
+
+  if (cglm::IsFloatEqual(det, 0.0f))
+    throw cglm::NoInverseMatrixException();
+
+  float inv_det = 1 / det;
 
   vec_type row0(rows_[1].y * rows_[2].z - rows_[2].y * rows_[1].z,
                 rows_[0].z * rows_[2].y - rows_[0].y * rows_[2].z,
@@ -143,4 +149,10 @@ cglm::Mat3 cglm::Mat3::GetInverse() const {
                 rows_[0].x * rows_[1].y - rows_[1].x * rows_[0].y);
 
   return Mat3(row0, row1, row2) * inv_det;
+}
+
+cglm::Mat3 cglm::Mat3::GetTransposed() const noexcept {
+  return {get_col(0),
+          get_col(1),
+          get_col(2)};
 }

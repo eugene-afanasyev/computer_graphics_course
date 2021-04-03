@@ -543,3 +543,15 @@ TEST_CASE("Mat3 inverse") {
   REQUIRE(mat[1] == Vec3(20, -15, -4));
   REQUIRE(mat[2] == Vec3(-5, 4, 1));
 }
+
+TEST_CASE("Mat3 transpose") {
+  Mat3 mat({1, 2, 3},
+           {0, 1, 4},
+           {5, 6, 0});
+
+  mat = mat.GetTransposed();
+
+  REQUIRE(mat[0] == Vec3(1, 0, 5));
+  REQUIRE(mat[1] == Vec3(2, 1, 6));
+  REQUIRE(mat[2] == Vec3(3, 4, 0));
+}

@@ -16,10 +16,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math/mat3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat3.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math/mat3.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat3.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mat_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,14 +126,7 @@
       <workItem from="1617257991838" duration="152000" />
       <workItem from="1617359374021" duration="6655000" />
       <workItem from="1617414856962" duration="5079000" />
-      <workItem from="1617434954856" duration="7671000" />
-    </task>
-    <task id="LOCAL-00014" summary="vec3 multiplication and div on a number implemented and covered with tests">
-      <created>1615732383839</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1615732383839</updated>
+      <workItem from="1617434954856" duration="8011000" />
     </task>
     <task id="LOCAL-00015" summary="Vec3 completely implemented">
       <created>1615888041376</created>
@@ -473,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617442401068</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="cglm::Mat3 inverse matrix method defined and covered in tests">
+      <created>1617444872077</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1617444872077</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +490,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mat2 multiplication implemented and covered with tests" />
     <MESSAGE value="Mat2 multiplication on a num implemented and covered with tests" />
     <MESSAGE value="Mat2 division on a num implemented and covered with tests" />
     <MESSAGE value="Mat2 sum and subtraction on a number implemented and covered with tests" />
@@ -517,7 +514,8 @@
     <MESSAGE value="cglm::Mat3::operator-(float) definition" />
     <MESSAGE value="Mat3 multiplication on a vector definition and test coverage" />
     <MESSAGE value="cglm::Mat2 determinant method defined" />
-    <option name="LAST_COMMIT_MESSAGE" value="cglm::Mat2 determinant method defined" />
+    <MESSAGE value="cglm::Mat3 inverse matrix method defined and covered in tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="cglm::Mat3 inverse matrix method defined and covered in tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
