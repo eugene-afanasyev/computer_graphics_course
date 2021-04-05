@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.17)
 project(computer_graphics_course)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
+
 find_package(SFML 2.5.1 COMPONENTS system window graphics audio REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(glm REQUIRED)
@@ -16,7 +18,7 @@ endif()
 
 add_executable(computer_graphics_course test/mat_test.cpp ex.h 3rd/stb/stb_image.h 3rd/stb/stb_image.cpp utils/shaderLoader.h
         utils/shaderLoader.cpp src/shader_wrapper.cpp src/shader_wrapper.h src/math/vec2.cpp src/math/vec2.hpp src/math/vec3.cpp src/math/vec3.hpp src/math/vec4.cpp src/math/vec4.hpp src/math/mat2.cpp src/math/mat2.hpp
-        src/math/utils.hpp test/mat_test.cpp src/math/exception.cpp src/math/exception.hpp src/math/mat3.cpp src/math/mat3.hpp src/math/ext.hpp)
+        src/math/utils.hpp test/mat_test.cpp src/math/exception.cpp src/math/exception.hpp src/math/mat3.cpp src/math/mat3.hpp src/math/mat4.cpp src/math/mat4.hpp)
 
 target_link_libraries(computer_graphics_course sfml-graphics sfml-audio GL GLEW)
 
