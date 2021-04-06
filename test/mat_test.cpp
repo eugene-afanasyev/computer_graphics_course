@@ -10,11 +10,15 @@
 #include "../src/math/vec2.hpp"
 #include "../src/math/mat3.hpp"
 #include "../src/math/vec3.hpp"
+#include "../src/math/mat4.hpp"
+#include "../src/math/vec4.hpp"
 
 using Mat2 = cglm::Mat2;
 using Vec2 = cglm::Vec2;
 using Mat3 = cglm::Mat3;
 using Vec3 = cglm::Vec3;
+using Mat4 = cglm::Mat4;
+using Vec4 = cglm::Vec4;
 
 bool floatCmp(float a, float b) {
   return std::fabs(a - b) < 1e-3;
@@ -598,4 +602,8 @@ TEST_CASE("Mat3 comparison methods") {
 
 /// Mat4 test section
 
+TEST_CASE("Mat4 constructors and accessors") {
+  {
 
+  }
+}

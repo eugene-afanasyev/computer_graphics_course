@@ -2,6 +2,7 @@
 #include "exception.hpp"
 
 using vec_type = cglm::Vec4;
+using Mat4 = cglm::Mat4;
 
 Mat4::Mat4() {
   rows_[0] = {1, 0, 0, 0};

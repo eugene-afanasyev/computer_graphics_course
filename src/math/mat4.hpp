@@ -4,6 +4,8 @@
 #include <array>
 #include "vec4.hpp"
 
+namespace cglm {
+
 class Mat4 {
  public:
   using vec_type = cglm::Vec4;
@@ -26,5 +28,7 @@ class Mat4 {
  private:
   vec_array rows_;
 };
+
+}
 
 #endif //COMPUTER_GRAPHICS_COURSE_SRC_MATH_MAT4_HPP_
