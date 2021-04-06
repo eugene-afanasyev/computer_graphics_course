@@ -17,7 +17,9 @@
   <component name="ChangeListManager">
     <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mat_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/mat4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat4.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,10 +75,20 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.computer_graphics_course">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Pattern" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="computer_graphics_course" TARGET_NAME="computer_graphics_course" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="computer_graphics_course" RUN_TARGET_NAME="computer_graphics_course" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="computer_graphics_course" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="computer_graphics_course" TARGET_NAME="computer_graphics_course" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="computer_graphics_course" RUN_TARGET_NAME="computer_graphics_course">
@@ -125,13 +137,7 @@
       <workItem from="1617456903877" duration="1039000" />
       <workItem from="1617538492087" duration="1307000" />
       <workItem from="1617628292471" duration="804000" />
-    </task>
-    <task id="LOCAL-00018" summary="Vec4 constructors implemented and covered with tests">
-      <created>1615891893633</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1615891893633</updated>
+      <workItem from="1617675528448" duration="2315000" />
     </task>
     <task id="LOCAL-00019" summary="Vec4 move ctr and copy ctr implemented and covered with tests">
       <created>1615892895314</created>
@@ -469,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617628490678</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Mat4 constructors definition">
+      <created>1617675877990</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1617675877990</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +501,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mat2 multiplication on a Vec2 implemented and covered with tests" />
     <MESSAGE value="defined NoInverseMatrixException" />
     <MESSAGE value="Mat2 GetInverse method defined" />
     <MESSAGE value="Mat2 GetInverse covered in tests" />
@@ -513,10 +525,10 @@
     <MESSAGE value="cglm::Mat3 transposed matrix method defined and covered in tests" />
     <MESSAGE value="cglm::Mat3 comparison methods defined and covered in tests" />
     <MESSAGE value="Mat4 constructors and accessors declaration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat4 constructors and accessors declaration" />
+    <MESSAGE value="Mat4 constructors definition" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat4 constructors definition" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1617628466250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
