@@ -16,7 +16,7 @@ class Mat3 {
   explicit Mat3(float v);
   explicit Mat3(vec_type const& diag_vec);
   Mat3(float, float, float);
-  Mat3(const vec_type& r0, const vec_type& r1, const vec_type& v2);
+  Mat3(const vec_type& r0, const vec_type& r1, const vec_type& r2);
 
   // -- Accessors --
   vec_type get_row(uint32_t r) const;

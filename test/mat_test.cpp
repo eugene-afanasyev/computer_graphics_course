@@ -595,3 +595,7 @@ TEST_CASE("Mat3 comparison methods") {
     REQUIRE(mat0 != mat1);
   }
 }
+
+/// Mat4 test section
+
+
