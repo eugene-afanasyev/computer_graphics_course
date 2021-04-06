@@ -16,10 +16,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/mat4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat4.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mat_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,21 +134,7 @@
       <workItem from="1617456903877" duration="1039000" />
       <workItem from="1617538492087" duration="1307000" />
       <workItem from="1617628292471" duration="804000" />
-      <workItem from="1617675528448" duration="2315000" />
-    </task>
-    <task id="LOCAL-00019" summary="Vec4 move ctr and copy ctr implemented and covered with tests">
-      <created>1615892895314</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1615892895314</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Vec4 comparison operations implemented and covered with tests">
-      <created>1616070459823</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1616070459823</updated>
+      <workItem from="1617675528448" duration="2879000" />
     </task>
     <task id="LOCAL-00021" summary="Vec4 sum and subtraction implemented and covered with tests">
       <created>1616071566035</created>
@@ -482,7 +465,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617675877990</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Mat4 accessors defined">
+      <created>1617713640204</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1617713640204</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Mat4 wrapped in cglm namespace">
+      <created>1617713781957</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1617713781957</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,8 +498,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="defined NoInverseMatrixException" />
-    <MESSAGE value="Mat2 GetInverse method defined" />
     <MESSAGE value="Mat2 GetInverse covered in tests" />
     <MESSAGE value="Mat2 transpose method defined and covered with tests" />
     <MESSAGE value="Mat2 comparison methods defined and covered in tests" />
@@ -526,7 +521,9 @@
     <MESSAGE value="cglm::Mat3 comparison methods defined and covered in tests" />
     <MESSAGE value="Mat4 constructors and accessors declaration" />
     <MESSAGE value="Mat4 constructors definition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat4 constructors definition" />
+    <MESSAGE value="Mat4 accessors defined" />
+    <MESSAGE value="Mat4 wrapped in cglm namespace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat4 wrapped in cglm namespace" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

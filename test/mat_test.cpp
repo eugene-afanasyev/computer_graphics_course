@@ -604,6 +604,108 @@ TEST_CASE("Mat3 comparison methods") {
 
 TEST_CASE("Mat4 constructors and accessors") {
   {
+    Mat4 mat;
 
+    REQUIRE(mat[0] == Vec4(1, 0, 0, 0));
+    REQUIRE(mat[1] == Vec4(0, 1, 0, 0));
+    REQUIRE(mat[2] == Vec4(0, 0, 1, 0));
+    REQUIRE(mat[3] == Vec4(0, 0, 0, 1));
+
+    REQUIRE(mat.get_row(0) == Vec4(1, 0, 0, 0));
+    REQUIRE(mat.get_row(1) == Vec4(0, 1, 0, 0));
+    REQUIRE(mat.get_row(2) == Vec4(0, 0, 1, 0));
+    REQUIRE(mat.get_row(3) == Vec4(0, 0, 0, 1));
+
+    REQUIRE(mat.get_col(0) == Vec4(1, 0, 0, 0));
+    REQUIRE(mat.get_col(1) == Vec4(0, 1, 0, 0));
+    REQUIRE(mat.get_col(2) == Vec4(0, 0, 1, 0));
+    REQUIRE(mat.get_col(3) == Vec4(0, 0, 0, 1));
+
+    REQUIRE(mat.get_diag() == Vec4(1, 1, 1, 1));
   }
+
+  {
+    Mat4 mat(1.89f);
+
+    REQUIRE(mat[0] == Vec4(1.89f, 0, 0, 0));
+    REQUIRE(mat[1] == Vec4(0, 1.89f, 0, 0));
+    REQUIRE(mat[2] == Vec4(0, 0, 1.89f, 0));
+    REQUIRE(mat[3] == Vec4(0, 0, 0, 1.89f));
+
+    REQUIRE(mat.get_row(0) == Vec4(1.89f, 0, 0, 0));
+    REQUIRE(mat.get_row(1) == Vec4(0, 1.89f, 0, 0));
+    REQUIRE(mat.get_row(2) == Vec4(0, 0, 1.89f, 0));
+    REQUIRE(mat.get_row(3) == Vec4(0, 0, 0, 1.89f));
+
+    REQUIRE(mat.get_col(0) == Vec4(1.89f, 0, 0, 0));
+    REQUIRE(mat.get_col(1) == Vec4(0, 1.89f, 0, 0));
+    REQUIRE(mat.get_col(2) == Vec4(0, 0, 1.89f, 0));
+    REQUIRE(mat.get_col(3) == Vec4(0, 0, 0, 1.89f));
+
+    REQUIRE(mat.get_diag() == Vec4(1.89f, 1.89f, 1.89f, 1.89f));
+  }
+
+  {
+    Mat4 mat(Vec4(1.89f, 2, 3, 10));
+
+    REQUIRE(mat[0] == Vec4(1.89f, 0, 0, 0));
+    REQUIRE(mat[1] == Vec4(0, 2, 0, 0));
+    REQUIRE(mat[2] == Vec4(0, 0, 3, 0));
+    REQUIRE(mat[3] == Vec4(0, 0, 0, 10));
+
+    REQUIRE(mat.get_row(0) == Vec4(1.89f, 0, 0, 0));
+    REQUIRE(mat.get_row(1) == Vec4(0, 2, 0, 0));
+    REQUIRE(mat.get_row(2) == Vec4(0, 0, 3, 0));
+    REQUIRE(mat.get_row(3) == Vec4(0, 0, 0, 10));
+
+    REQUIRE(mat.get_col(0) == Vec4(1.89f, 0, 0, 0));
+    REQUIRE(mat.get_col(1) == Vec4(0, 2, 0, 0));
+    REQUIRE(mat.get_col(2) == Vec4(0, 0, 3, 0));
+    REQUIRE(mat.get_col(3) == Vec4(0, 0, 0, 10));
+
+    REQUIRE(mat.get_diag() == Vec4(1.89f, 2, 3, 10));
+  }
+
+  {
+    Mat4 mat(1.89f, 2, 3, 10);
+
+    REQUIRE(mat[0] == Vec4(1.89f, 0, 0, 0));
+    REQUIRE(mat[1] == Vec4(0, 2, 0, 0));
+    REQUIRE(mat[2] == Vec4(0, 0, 3, 0));
+    REQUIRE(mat[3] == Vec4(0, 0, 0, 10));
+
+    REQUIRE(mat.get_row(0) == Vec4(1.89f, 0, 0, 0));
+    REQUIRE(mat.get_row(1) == Vec4(0, 2, 0, 0));
+    REQUIRE(mat.get_row(2) == Vec4(0, 0, 3, 0));
+    REQUIRE(mat.get_row(3) == Vec4(0, 0, 0, 10));
+
+    REQUIRE(mat.get_col(0) == Vec4(1.89f, 0, 0, 0));
+    REQUIRE(mat.get_col(1) == Vec4(0, 2, 0, 0));
+    REQUIRE(mat.get_col(2) == Vec4(0, 0, 3, 0));
+    REQUIRE(mat.get_col(3) == Vec4(0, 0, 0, 10));
+
+    REQUIRE(mat.get_diag() == Vec4(1.89f, 2, 3, 10));
+  }
+
+  Mat4 mat({1.89f, 0, 0, 0},
+           {0, 2, 0, 0},
+           {0, 0, 3, 0},
+           {0, 0, 0, 10});
+
+  REQUIRE(mat[0] == Vec4(1.89f, 0, 0, 0));
+  REQUIRE(mat[1] == Vec4(0, 2, 0, 0));
+  REQUIRE(mat[2] == Vec4(0, 0, 3, 0));
+  REQUIRE(mat[3] == Vec4(0, 0, 0, 10));
+
+  REQUIRE(mat.get_row(0) == Vec4(1.89f, 0, 0, 0));
+  REQUIRE(mat.get_row(1) == Vec4(0, 2, 0, 0));
+  REQUIRE(mat.get_row(2) == Vec4(0, 0, 3, 0));
+  REQUIRE(mat.get_row(3) == Vec4(0, 0, 0, 10));
+
+  REQUIRE(mat.get_col(0) == Vec4(1.89f, 0, 0, 0));
+  REQUIRE(mat.get_col(1) == Vec4(0, 2, 0, 0));
+  REQUIRE(mat.get_col(2) == Vec4(0, 0, 3, 0));
+  REQUIRE(mat.get_col(3) == Vec4(0, 0, 0, 10));
+
+  REQUIRE(mat.get_diag() == Vec4(1.89f, 2, 3, 10));
 }
