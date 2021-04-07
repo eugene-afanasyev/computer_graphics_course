@@ -27,6 +27,7 @@ class Mat4 {
 
   // -- Binary arithmetic operations --
   Mat4 operator+(const Mat4&) const;
+  Mat4 operator-(const Mat4&) const;
 
  private:
   vec_array rows_;

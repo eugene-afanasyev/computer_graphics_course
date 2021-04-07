@@ -726,3 +726,19 @@ TEST_CASE("Mat4 addition") {
   REQUIRE(mat_result[2].z == glm_mat_result[2].z);
   REQUIRE(mat_result[3].w == glm_mat_result[3].w);
 }
+
+TEST_CASE("Mat4 subtraction") {
+  Mat4 mat0(9);
+  Mat4 mat1(11);
+
+  glm::mat4 glm_mat0(9);
+  glm::mat4 glm_mat1(11);
+
+  Mat4 mat_result = mat0 - mat1;
+  glm::mat4 glm_mat_result = glm_mat0 - glm_mat1;
+
+  REQUIRE(mat_result[0].x == glm_mat_result[0].x);
+  REQUIRE(mat_result[1].y == glm_mat_result[1].y);
+  REQUIRE(mat_result[2].z == glm_mat_result[2].z);
+  REQUIRE(mat_result[3].w == glm_mat_result[3].w);
+}
