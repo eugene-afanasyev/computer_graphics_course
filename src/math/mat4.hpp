@@ -25,6 +25,9 @@ class Mat4 {
   vec_type get_diag() const noexcept;
   vec_type operator[](unsigned r) const;
 
+  // -- Binary arithmetic operations --
+  Mat4 operator+(const Mat4&) const;
+
  private:
   vec_array rows_;
 };

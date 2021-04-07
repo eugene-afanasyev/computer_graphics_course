@@ -69,3 +69,10 @@ vec_type Mat4::operator[](unsigned int r) const {
   else
     return rows_[r];
 }
+
+Mat4 cglm::Mat4::operator+(const Mat4 &src) const {
+  return {{rows_[0] + src[0]},
+          {rows_[1] + src[1]},
+          {rows_[2] + src[2]},
+          {rows_[3] + src[3]}};
+}

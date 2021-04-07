@@ -2,6 +2,7 @@
 
 #include <glm/mat2x2.hpp>
 #include <glm/mat3x3.hpp>
+#include <glm/mat4x4.hpp>
 #include <glm/ext/vector_int1.hpp>
 #include <glm/ext/scalar_common.hpp>
 #include <iostream>
@@ -708,4 +709,20 @@ TEST_CASE("Mat4 constructors and accessors") {
   REQUIRE(mat.get_col(3) == Vec4(0, 0, 0, 10));
 
   REQUIRE(mat.get_diag() == Vec4(1.89f, 2, 3, 10));
+}
+
+TEST_CASE("Mat4 addition") {
+  Mat4 mat0(9);
+  Mat4 mat1(11);
+
+  glm::mat4 glm_mat0(9);
+  glm::mat4 glm_mat1(11);
+
+  Mat4 mat_result = mat0 + mat1;
+  glm::mat4 glm_mat_result = glm_mat0 + glm_mat1;
+
+  REQUIRE(mat_result[0].x == glm_mat_result[0].x);
+  REQUIRE(mat_result[1].y == glm_mat_result[1].y);
+  REQUIRE(mat_result[2].z == glm_mat_result[2].z);
+  REQUIRE(mat_result[3].w == glm_mat_result[3].w);
 }
