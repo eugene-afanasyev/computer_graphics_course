@@ -17,9 +17,9 @@
   <component name="ChangeListManager">
     <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/mat3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat3.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math/mat4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat4.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math/mat4.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat4.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mat_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +29,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-Coverage" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -50,9 +50,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="cmake.loaded.for.project" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -75,23 +78,23 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.computer_graphics_course">
-    <configuration name="Pattern" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="computer_graphics_course" TARGET_NAME="computer_graphics_course" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="computer_graphics_course" RUN_TARGET_NAME="computer_graphics_course" TEST_MODE="PATTERN">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Pattern" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="computer_graphics_course" TARGET_NAME="computer_graphics_course" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="computer_graphics_course" RUN_TARGET_NAME="computer_graphics_course" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="computer_graphics_course" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="computer_graphics_course" TARGET_NAME="computer_graphics_course" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="computer_graphics_course" RUN_TARGET_NAME="computer_graphics_course">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="computer_graphics_course" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="computer_graphics_course" TARGET_NAME="computer_graphics_course" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="computer_graphics_course" RUN_TARGET_NAME="computer_graphics_course">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -138,28 +141,8 @@
       <workItem from="1617538492087" duration="1307000" />
       <workItem from="1617628292471" duration="804000" />
       <workItem from="1617675528448" duration="3400000" />
-      <workItem from="1617801307088" duration="1407000" />
-    </task>
-    <task id="LOCAL-00022" summary="Vec4 multiplication and div on a number implemented and covered with tests">
-      <created>1616071978864</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1616071978864</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Vec4 assignment sum and subtraction implemented and covered with tests">
-      <created>1616072810086</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1616072810086</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Vec4 assignment multiplication and div on a num implemented and covered with tests">
-      <created>1616074615030</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1616074615030</updated>
+      <workItem from="1617801307088" duration="2227000" />
+      <workItem from="1618326766735" duration="933000" />
     </task>
     <task id="LOCAL-00025" summary="Vec4 assignment multiplication and div on a num implemented and covered with tests">
       <created>1616074642594</created>
@@ -483,7 +466,28 @@
       <option name="project" value="LOCAL" />
       <updated>1617714220234</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Mat4 addition defined and covered in tests">
+      <created>1617802986746</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1617802986747</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Mat4 subtraction defined and covered in tests">
+      <created>1617803190742</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1617803190742</updated>
+    </task>
+    <task id="LOCAL-00073" summary="update .gitignore">
+      <created>1617803254718</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1617803254718</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,9 +506,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mat2 transpose method defined and covered with tests" />
-    <MESSAGE value="Mat2 comparison methods defined and covered in tests" />
-    <MESSAGE value="changed Mat2 default constructor, fixed corresponding tests" />
     <MESSAGE value="Mat3 defined constructors" />
     <MESSAGE value="Mat3 accessors defined" />
     <MESSAGE value="Mat3 constructors and accessors covered in tests" />
@@ -527,7 +528,10 @@
     <MESSAGE value="Mat4 accessors defined" />
     <MESSAGE value="Mat4 wrapped in cglm namespace" />
     <MESSAGE value="Mat4 constructors and accessors covered in tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat4 constructors and accessors covered in tests" />
+    <MESSAGE value="Mat4 addition defined and covered in tests" />
+    <MESSAGE value="Mat4 subtraction defined and covered in tests" />
+    <MESSAGE value="update .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update .gitignore" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../CLionProjects/computer-graphics-course/cmake-build-debug-coverage" NAME="computer_graphics_course Coverage Results" MODIFIED="1615560137038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

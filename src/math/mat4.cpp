@@ -83,3 +83,24 @@ Mat4 cglm::Mat4::operator-(const Mat4 &src) const {
           {rows_[2] - src[2]},
           {rows_[3] - src[3]}};
 }
+
+Mat4 cglm::Mat4::operator*(const Mat4 &src) const {
+  vec_type row0(rows_[0] * src.get_col(0),
+                rows_[0] * src.get_col(1),
+                rows_[0] * src.get_col(2),
+                rows_[0] * src.get_col(3));
+  vec_type row1(rows_[1] * src.get_col(0),
+                rows_[1] * src.get_col(1),
+                rows_[1] * src.get_col(2),
+                rows_[1] * src.get_col(3));
+  vec_type row2(rows_[2] * src.get_col(0),
+                rows_[2] * src.get_col(1),
+                rows_[2] * src.get_col(2),
+                rows_[2] * src.get_col(3));
+  vec_type row3(rows_[3] * src.get_col(0),
+                rows_[3] * src.get_col(1),
+                rows_[3] * src.get_col(2),
+                rows_[3] * src.get_col(3));
+
+  return {row0, row1, row2, row3};
+}
