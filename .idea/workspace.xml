@@ -15,7 +15,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="Mat4 multiplication covered in tests, code style fixes">
+    <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="Mat4 multiplication on a number defined and covered in tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math/mat4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat4.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math/mat4.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat4.hpp" afterDir="false" />
@@ -139,14 +139,7 @@
       <workItem from="1617801307088" duration="2227000" />
       <workItem from="1618326766735" duration="1103000" />
       <workItem from="1618892134787" duration="160000" />
-      <workItem from="1619168081635" duration="1655000" />
-    </task>
-    <task id="LOCAL-00028" summary="custom gl math library wrapped in a namespace">
-      <created>1616123432418</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1616123432418</updated>
+      <workItem from="1619168081635" duration="3296000" />
     </task>
     <task id="LOCAL-00029" summary="important fixes, refactoring work">
       <created>1616126775753</created>
@@ -484,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619169169489</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Mat4 multiplication on a number defined and covered in tests">
+      <created>1619170034268</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1619170034269</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,7 +503,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mat3 addition defined and covered in tests" />
     <MESSAGE value="Mat3 subtraction defined and covered in tests" />
     <MESSAGE value="Mat3 multiplication defined and covered in tests" />
     <MESSAGE value="Mat3 scalar multiplication defined" />
@@ -528,7 +527,8 @@
     <MESSAGE value="changes in Mat3::operator(const Mat&amp;3) definition, getting rid of unnecessary function calls" />
     <MESSAGE value="Mat4 multiplication on mat defined" />
     <MESSAGE value="Mat4 multiplication covered in tests, code style fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat4 multiplication covered in tests, code style fixes" />
+    <MESSAGE value="Mat4 multiplication on a number defined and covered in tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat4 multiplication on a number defined and covered in tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
