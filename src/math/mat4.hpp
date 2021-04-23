@@ -33,6 +33,7 @@ class Mat4 {
   // -- Scalar arithmetic operations --
   Mat4 operator*(float) const;
   Mat4 operator/(float) const;
+  Mat4 operator+(float) const;
 
  private:
   vec_array rows_;

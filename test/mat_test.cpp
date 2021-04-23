@@ -826,3 +826,34 @@ TEST_CASE("Mat4 division by num") {
   REQUIRE(mat[3].w == glm_mat[3].w);
 }
 
+TEST_CASE("Mat4 adding a number") {
+  Mat4 mat({10, 10, 10, 10},
+           {20, 20, 20, 20},
+           {30, 30, 30, 30},
+           {10, 10, 10, 10});
+
+  glm::mat4 glm_mat({10, 20, 30, 10},
+                    {10, 20, 30, 10},
+                    {10, 20, 30, 10},
+                    {10, 20, 30, 10});
+
+  mat = mat + 100;
+  glm_mat = glm::operator+(glm_mat, {100});
+
+  REQUIRE(mat[0].x == glm_mat[0].x);
+  REQUIRE(mat[0].y == glm_mat[1].x);
+  REQUIRE(mat[0].z == glm_mat[2].x);
+  REQUIRE(mat[0].w == glm_mat[3].x);
+  REQUIRE(mat[1].x == glm_mat[0].y);
+  REQUIRE(mat[1].y == glm_mat[1].y);
+  REQUIRE(mat[1].z == glm_mat[2].y);
+  REQUIRE(mat[1].w == glm_mat[3].y);
+  REQUIRE(mat[2].x == glm_mat[0].z);
+  REQUIRE(mat[2].y == glm_mat[1].z);
+  REQUIRE(mat[2].z == glm_mat[2].z);
+  REQUIRE(mat[2].w == glm_mat[3].z);
+  REQUIRE(mat[3].x == glm_mat[0].w);
+  REQUIRE(mat[3].y == glm_mat[1].w);
+  REQUIRE(mat[3].z == glm_mat[2].w);
+  REQUIRE(mat[3].w == glm_mat[3].w);
+}
