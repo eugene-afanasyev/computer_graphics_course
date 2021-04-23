@@ -761,3 +761,35 @@ TEST_CASE("Mat4 multiplication") {
   REQUIRE(mat_result[2] == Vec4(73136, 19089, 212196, 892));
   REQUIRE(mat_result[3] == Vec4(1512, 15722, 2616, 128));
 }
+
+TEST_CASE("Mat4 multiplication on a num") {
+  Mat4 mat({10, 10, 10, 10},
+           {20, 20, 20, 20},
+           {30, 30, 30, 30},
+           {10, 10, 10, 10});
+
+  glm::mat4 glm_mat({10, 20, 30, 10},
+                    {10, 20, 30, 10},
+                    {10, 20, 30, 10},
+                    {10, 20, 30, 10});
+
+  mat = mat * 3;
+  glm_mat = glm::operator*(glm_mat, {3});
+
+  REQUIRE(mat[0].x == glm_mat[0].x);
+  REQUIRE(mat[0].y == glm_mat[1].x);
+  REQUIRE(mat[0].z == glm_mat[2].x);
+  REQUIRE(mat[0].w == glm_mat[3].x);
+  REQUIRE(mat[1].x == glm_mat[0].y);
+  REQUIRE(mat[1].y == glm_mat[1].y);
+  REQUIRE(mat[1].z == glm_mat[2].y);
+  REQUIRE(mat[1].w == glm_mat[3].y);
+  REQUIRE(mat[2].x == glm_mat[0].z);
+  REQUIRE(mat[2].y == glm_mat[1].z);
+  REQUIRE(mat[2].z == glm_mat[2].z);
+  REQUIRE(mat[2].w == glm_mat[3].z);
+  REQUIRE(mat[3].x == glm_mat[0].w);
+  REQUIRE(mat[3].y == glm_mat[1].w);
+  REQUIRE(mat[3].z == glm_mat[2].w);
+  REQUIRE(mat[3].w == glm_mat[3].w);
+}

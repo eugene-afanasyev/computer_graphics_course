@@ -104,3 +104,10 @@ Mat4 cglm::Mat4::operator*(const Mat4 &src) const {
 
   return {row0, row1, row2, row3};
 }
+
+Mat4 cglm::Mat4::operator*(float v) const {
+  return {{rows_[0] * v},
+          {rows_[1] * v},
+          {rows_[2] * v},
+          {rows_[3] * v}};
+}
