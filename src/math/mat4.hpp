@@ -14,10 +14,10 @@ class Mat4 {
   //  -- Constructors --
   Mat4();
   explicit Mat4(float v);
-  explicit Mat4(vec_type const& diag_vec);
+  explicit Mat4(vec_type const &diag_vec);
   Mat4(float, float, float, float);
-  Mat4(const vec_type& r0, const vec_type& r1,
-       const vec_type& r2, const vec_type& r3);
+  Mat4(const vec_type &r0, const vec_type &r1,
+       const vec_type &r2, const vec_type &r3);
 
   // -- Accessors --
   vec_type get_row(uint32_t r) const;
@@ -26,9 +26,9 @@ class Mat4 {
   vec_type operator[](unsigned r) const;
 
   // -- Binary arithmetic operations --
-  Mat4 operator+(const Mat4&) const;
-  Mat4 operator-(const Mat4&) const;
-  Mat4 operator*(const Mat4&) const;
+  Mat4 operator+(const Mat4 &) const;
+  Mat4 operator-(const Mat4 &) const;
+  Mat4 operator*(const Mat4 &) const;
 
  private:
   vec_array rows_;

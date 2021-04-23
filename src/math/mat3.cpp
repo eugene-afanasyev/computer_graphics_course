@@ -29,7 +29,7 @@ cglm::Mat3::Mat3(float v0, float v1, float v2) {
   rows_[2].z = v2;
 }
 
-cglm::Mat3::Mat3(const vec_type& r0, const vec_type& r1, const vec_type& r2) {
+cglm::Mat3::Mat3(const vec_type &r0, const vec_type &r1, const vec_type &r2) {
   rows_[0] = r0;
   rows_[1] = r1;
   rows_[2] = r2;
@@ -44,9 +44,8 @@ vec_type cglm::Mat3::get_row(uint32_t r) const {
 
 vec_type cglm::Mat3::get_col(uint32_t c) const {
   if (c < 0u || c > 2u)
-  throw cglm::OutOfRangeException();
-  else
-  if (c == 0)
+    throw cglm::OutOfRangeException();
+  else if (c == 0)
     return {rows_[0].x, rows_[1].x, rows_[2].x};
   else if (c == 1)
     return {rows_[0].y, rows_[1].y, rows_[2].y};
@@ -127,9 +126,9 @@ cglm::Vec3 cglm::Mat3::operator*(const vec_type &src) const {
 
 cglm::Mat3 cglm::Mat3::GetInverse() const {
   float det =
-    (rows_[0].x * (rows_[1].y * rows_[2].z - rows_[1].z * rows_[2].y) -
-    rows_[0].y * (rows_[1].x * rows_[2].z - rows_[2].x * rows_[1].z) +
-    rows_[0].z * (rows_[1].x * rows_[2].y - rows_[1].y * rows_[2].x));
+      (rows_[0].x * (rows_[1].y * rows_[2].z - rows_[1].z * rows_[2].y) -
+          rows_[0].y * (rows_[1].x * rows_[2].z - rows_[2].x * rows_[1].z) +
+          rows_[0].z * (rows_[1].x * rows_[2].y - rows_[1].y * rows_[2].x));
 
   if (cglm::IsFloatEqual(det, 0.0f))
     throw cglm::NoInverseMatrixException();
@@ -159,14 +158,14 @@ cglm::Mat3 cglm::Mat3::GetTransposed() const noexcept {
 
 bool cglm::Mat3::operator==(const Mat3 &src) const noexcept {
   return (
-    rows_[0] == src[0] &&
-    rows_[1] == src[1] &&
-    rows_[2] == src[2]);
+      rows_[0] == src[0] &&
+          rows_[1] == src[1] &&
+          rows_[2] == src[2]);
 }
 
 bool cglm::Mat3::operator!=(const cglm::Mat3 &src) const noexcept {
   return !(
-    rows_[0] == src[0] &&
-    rows_[1] == src[1] &&
-    rows_[2] == src[2]);
+      rows_[0] == src[0] &&
+          rows_[1] == src[1] &&
+          rows_[2] == src[2]);
 }

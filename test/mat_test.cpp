@@ -103,15 +103,15 @@ TEST_CASE("Mat2 constructors and accessors") {
 TEST_CASE("Mat2 binary arithmetic operations") {
   {
     glm::mat2 glm_mat1({1, 2},
-                      {3, 4});
+                       {3, 4});
     glm::mat2 glm_mat2({1, 2},
                        {3, 4});
 
     Mat2 mat1({1, 2},
-             {3, 4});
+              {3, 4});
 
     Mat2 mat2({1, 2},
-             {3, 4});
+              {3, 4});
 
     glm::mat2 glm_mat_result = glm_mat1 + glm_mat2;
     Mat2 mat_result = mat1 + mat2;
@@ -147,12 +147,12 @@ TEST_CASE("Mat2 binary arithmetic operations") {
 TEST_CASE("Mat2 multiplication") {
   {
     glm::mat2 glm_mat =
-      glm::mat2({3, 12}, {1, 14}) *
-      glm::mat2({123, 13.2f}, {33, 4.4f});
+        glm::mat2({3, 12}, {1, 14}) *
+            glm::mat2({123, 13.2f}, {33, 4.4f});
 
     Mat2 mat =
-      Mat2{{3, 1}, {12, 14}} *
-      Mat2{{123, 33}, {13.2f, 4.4f}};
+        Mat2{{3, 1}, {12, 14}} *
+            Mat2{{123, 33}, {13.2f, 4.4f}};
 
     REQUIRE(floatCmp(glm_mat[0].x, mat[0].x));
     REQUIRE(floatCmp(glm_mat[1].x, mat[0].y));
@@ -163,7 +163,7 @@ TEST_CASE("Mat2 multiplication") {
 
 TEST_CASE("Mat2 multiplication on a number") {
   Mat2 mat =
-    Mat2({3.14, 32.2f}, {100.1f, 1.11f}) * 10;
+      Mat2({3.14, 32.2f}, {100.1f, 1.11f}) * 10;
 
   REQUIRE(floatCmp(31.4f, mat[0].x));
   REQUIRE(floatCmp(322.0f, mat[0].y));
@@ -173,7 +173,7 @@ TEST_CASE("Mat2 multiplication on a number") {
 
 TEST_CASE("Mat2 division on a number") {
   Mat2 mat =
-    Mat2({3.14, 32.2f}, {100.1f, 1.11f}) / 10;
+      Mat2({3.14, 32.2f}, {100.1f, 1.11f}) / 10;
 
   REQUIRE(floatCmp(0.314f, mat[0].x));
   REQUIRE(floatCmp(3.220f, mat[0].y));
@@ -372,9 +372,9 @@ TEST_CASE("Mat3 constructors and accessors") {
 
   {
     Mat3 mat(
-      {1.14, 0, 0},
-      {0, 12.22, 0},
-      {0, 0, 99.3});
+        {1.14, 0, 0},
+        {0, 12.22, 0},
+        {0, 0, 99.3});
 
     REQUIRE(mat[0] == Vec3(1.14, 0, 0));
     REQUIRE(mat[1] == Vec3(0, 12.22, 0));
@@ -428,7 +428,7 @@ TEST_CASE("Mat3 multiplication") {
             {48, 44, 1});
 
   Mat3 mat1({12, 33, 38},
-            {58, 32.5, 32 },
+            {58, 32.5, 32},
             {13, 11, 2});
 
   Mat3 mat_result = mat0 * mat1;
@@ -564,12 +564,12 @@ TEST_CASE("Mat3 transpose") {
 TEST_CASE("Mat3 comparison methods") {
   {
     Mat3 mat0({1, 2, 3},
-             {0, 1, 4},
-             {5, 6, 0});
+              {0, 1, 4},
+              {5, 6, 0});
 
     Mat3 mat1({1, 2, 3},
-             {0, 1, 4},
-             {5, 6, 0});
+              {0, 1, 4},
+              {5, 6, 0});
 
     REQUIRE(mat0 == mat1);
   }
@@ -741,4 +741,23 @@ TEST_CASE("Mat4 subtraction") {
   REQUIRE(mat_result[1].y == glm_mat_result[1].y);
   REQUIRE(mat_result[2].z == glm_mat_result[2].z);
   REQUIRE(mat_result[3].w == glm_mat_result[3].w);
+}
+
+TEST_CASE("Mat4 multiplication") {
+  Mat4 mat0({29, 2, 0, 1},
+            {5, 18, 294, 48},
+            {48, 11, 773, 63},
+            {46, 0, 6, 6});
+
+  Mat4 mat1({12, 341, 21, 2},
+            {0, 213, 3, 38},
+            {88, 0, 273, 0},
+            {72, 6, 2, 6});
+
+  auto mat_result = mat0 * mat1;
+
+  REQUIRE(mat_result[0] == Vec4(420, 10321, 617, 140));
+  REQUIRE(mat_result[1] == Vec4(29388, 5827, 80517, 982));
+  REQUIRE(mat_result[2] == Vec4(73136, 19089, 212196, 892));
+  REQUIRE(mat_result[3] == Vec4(1512, 15722, 2616, 128));
 }
