@@ -111,3 +111,10 @@ Mat4 cglm::Mat4::operator*(float v) const {
           {rows_[2] * v},
           {rows_[3] * v}};
 }
+
+Mat4 cglm::Mat4::operator/(float v) const {
+  return {{rows_[0] / v},
+          {rows_[1] / v},
+          {rows_[2] / v},
+          {rows_[3] / v}};
+}
