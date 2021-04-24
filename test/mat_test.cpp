@@ -925,3 +925,17 @@ TEST_CASE("Mat4 transposed") {
   REQUIRE(mat[2] == Vec4(10, 5, 30, 5));
   REQUIRE(mat[3] == Vec4(10, 2, 30, 3));
 }
+
+TEST_CASE("Mat4 inverse") {
+  Mat4 mat({0, 3, -1, 2},
+           {2, 1, 0, 0},
+           {-2, -1, 0, 2},
+           {-5, 7, 1, 1});
+
+  mat = mat.GetInverse();
+
+  REQUIRE(mat[0] == Vec4(-0.04f, 0.46f, 0.06f, -0.04f));
+  REQUIRE(mat[1] == Vec4(0.08f, 0.08f, -0.12f, 0.08f));
+  REQUIRE(mat[2] == Vec4(-0.76f, 1.24f, 0.64f, 0.24f));
+  REQUIRE(mat[3] == Vec4(0, 0.5f, 0.5f, 0));
+}

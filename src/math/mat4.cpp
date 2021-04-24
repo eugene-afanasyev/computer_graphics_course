@@ -1,5 +1,6 @@
 #include "mat4.hpp"
 #include "exception.hpp"
+#include "utils.hpp"
 
 using vec_type = cglm::Vec4;
 using Mat4 = cglm::Mat4;
@@ -157,4 +158,137 @@ Mat4 cglm::Mat4::GetTransposed() const {
           get_col(1),
           get_col(2),
           get_col(3)};
+}
+
+Mat4 cglm::Mat4::GetInverse() const {
+  // algorithm interpreted from MESA implementation of the glu library
+
+  float m[16] = {rows_[0].x, rows_[0].y, rows_[0].z, rows_[0].w,
+                 rows_[1].x, rows_[1].y, rows_[1].z, rows_[1].w,
+                 rows_[2].x, rows_[2].y, rows_[2].z, rows_[2].w,
+                 rows_[3].x, rows_[3].y, rows_[3].z, rows_[3].w};
+
+  auto x0 = m[5]  * m[10] * m[15] -
+      m[5]  * m[11] * m[14] -
+      m[9]  * m[6]  * m[15] +
+      m[9]  * m[7]  * m[14] +
+      m[13] * m[6]  * m[11] -
+      m[13] * m[7]  * m[10];
+
+  auto x1 = -m[4]  * m[10] * m[15] +
+      m[4]  * m[11] * m[14] +
+      m[8]  * m[6]  * m[15] -
+      m[8]  * m[7]  * m[14] -
+      m[12] * m[6]  * m[11] +
+      m[12] * m[7]  * m[10];
+
+  auto x2 = m[4]  * m[9] * m[15] -
+      m[4]  * m[11] * m[13] -
+      m[8]  * m[5] * m[15] +
+      m[8]  * m[7] * m[13] +
+      m[12] * m[5] * m[11] -
+      m[12] * m[7] * m[9];
+
+  auto x3 = -m[4]  * m[9] * m[14] +
+      m[4]  * m[10] * m[13] +
+      m[8]  * m[5] * m[14] -
+      m[8]  * m[6] * m[13] -
+      m[12] * m[5] * m[10] +
+      m[12] * m[6] * m[9];
+
+  auto y0 = -m[1]  * m[10] * m[15] +
+      m[1]  * m[11] * m[14] +
+      m[9]  * m[2] * m[15] -
+      m[9]  * m[3] * m[14] -
+      m[13] * m[2] * m[11] +
+      m[13] * m[3] * m[10];
+
+  auto y1 = m[0]  * m[10] * m[15] -
+      m[0]  * m[11] * m[14] -
+      m[8]  * m[2] * m[15] +
+      m[8]  * m[3] * m[14] +
+      m[12] * m[2] * m[11] -
+      m[12] * m[3] * m[10];
+
+  auto y2 = -m[0]  * m[9] * m[15] +
+      m[0]  * m[11] * m[13] +
+      m[8]  * m[1] * m[15] -
+      m[8]  * m[3] * m[13] -
+      m[12] * m[1] * m[11] +
+      m[12] * m[3] * m[9];
+
+  auto y3 = m[0]  * m[9] * m[14] -
+      m[0]  * m[10] * m[13] -
+      m[8]  * m[1] * m[14] +
+      m[8]  * m[2] * m[13] +
+      m[12] * m[1] * m[10] -
+      m[12] * m[2] * m[9];
+
+  auto z0 = m[1]  * m[6] * m[15] -
+      m[1]  * m[7] * m[14] -
+      m[5]  * m[2] * m[15] +
+      m[5]  * m[3] * m[14] +
+      m[13] * m[2] * m[7] -
+      m[13] * m[3] * m[6];
+
+  auto z1 = -m[0]  * m[6] * m[15] +
+      m[0]  * m[7] * m[14] +
+      m[4]  * m[2] * m[15] -
+      m[4]  * m[3] * m[14] -
+      m[12] * m[2] * m[7] +
+      m[12] * m[3] * m[6];
+
+  auto z2 = m[0]  * m[5] * m[15] -
+      m[0]  * m[7] * m[13] -
+      m[4]  * m[1] * m[15] +
+      m[4]  * m[3] * m[13] +
+      m[12] * m[1] * m[7] -
+      m[12] * m[3] * m[5];
+
+  auto z3 = -m[0]  * m[5] * m[14] +
+      m[0]  * m[6] * m[13] +
+      m[4]  * m[1] * m[14] -
+      m[4]  * m[2] * m[13] -
+      m[12] * m[1] * m[6] +
+      m[12] * m[2] * m[5];
+
+  auto w0 = -m[1] * m[6] * m[11] +
+      m[1] * m[7] * m[10] +
+      m[5] * m[2] * m[11] -
+      m[5] * m[3] * m[10] -
+      m[9] * m[2] * m[7] +
+      m[9] * m[3] * m[6];
+
+  auto w1 = m[0] * m[6] * m[11] -
+      m[0] * m[7] * m[10] -
+      m[4] * m[2] * m[11] +
+      m[4] * m[3] * m[10] +
+      m[8] * m[2] * m[7] -
+      m[8] * m[3] * m[6];
+
+  auto w2 = -m[0] * m[5] * m[11] +
+      m[0] * m[7] * m[9] +
+      m[4] * m[1] * m[11] -
+      m[4] * m[3] * m[9] -
+      m[8] * m[1] * m[7] +
+      m[8] * m[3] * m[5];
+
+  auto w3 = m[0] * m[5] * m[10] -
+      m[0] * m[6] * m[9] -
+      m[4] * m[1] * m[10] +
+      m[4] * m[2] * m[9] +
+      m[8] * m[1] * m[6] -
+      m[8] * m[2] * m[5];
+
+  auto det = m[0] * x0 + m[1] * x1 + m[2] * x2 + m[3] * x3;
+
+  if (cglm::IsFloatEqual(det, 0.0f))
+    throw cglm::NoInverseMatrixException();
+
+  det = 1.0f / det;
+
+  return {{x0 * det, y0 * det, z0 * det, w0 * det},
+          {x1 * det, y1 * det, z1 * det, w1 * det},
+          {x2 * det, y2 * det, z2 * det, w2 * det},
+          {x3 * det, y3 * det, z3 * det, w3 * det}};
 }

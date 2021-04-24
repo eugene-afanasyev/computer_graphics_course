@@ -40,6 +40,7 @@ class Mat4 {
 
   // -- Matrix transformations --
   Mat4 GetTransposed() const;
+  Mat4 GetInverse() const;
 
  private:
   vec_array rows_;
