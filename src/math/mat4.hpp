@@ -42,6 +42,10 @@ class Mat4 {
   Mat4 GetTransposed() const;
   Mat4 GetInverse() const;
 
+  // -- Comparison methods --
+  bool operator==(const Mat4 &) const noexcept;
+  bool operator!=(const Mat4 &) const noexcept;
+
  private:
   vec_array rows_;
 };

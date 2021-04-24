@@ -939,3 +939,48 @@ TEST_CASE("Mat4 inverse") {
   REQUIRE(mat[2] == Vec4(-0.76f, 1.24f, 0.64f, 0.24f));
   REQUIRE(mat[3] == Vec4(0, 0.5f, 0.5f, 0));
 }
+
+TEST_CASE("Mat4 comparison methods") {
+  {
+    Mat4 mat0, mat1;
+    REQUIRE(mat0 == mat1);
+  }
+  {
+    Mat4 mat0(0), mat1;
+    REQUIRE(mat0 != mat1);
+  }
+  {
+    Mat4 mat0(1), mat1(1, 1, 1, 1);
+    REQUIRE(mat0 == mat1);
+  }
+  {
+    Mat4 mat0(1), mat1(1, 1, 1, 0);
+    REQUIRE(mat0 != mat1);
+  }
+  {
+    Mat4 mat0({0, 3, -1, 2},
+             {2, 1, 0, 0},
+             {-2, -1, 0, 2},
+             {-5, 7, 1, 1});
+
+    Mat4 mat1({10, 10, 10, 10},
+             {20, 20, 20, 20},
+             {30, 30, 30, 30},
+             {10, 10, 10, 10});
+
+    REQUIRE(mat0 != mat1);
+  }
+  {
+    Mat4 mat0({10, 10, 10, 10},
+              {20, 20, 20, 20},
+              {30, 30, 30, 30},
+              {10, 10, 10, 10});
+
+    Mat4 mat1({10, 10, 10, 10},
+              {20, 20, 20, 20},
+              {30, 30, 30, 30},
+              {10, 10, 10, 10});
+
+    REQUIRE(mat0 == mat1);
+  }
+}

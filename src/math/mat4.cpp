@@ -292,3 +292,18 @@ Mat4 cglm::Mat4::GetInverse() const {
           {x2 * det, y2 * det, z2 * det, w2 * det},
           {x3 * det, y3 * det, z3 * det, w3 * det}};
 }
+bool cglm::Mat4::operator==(const Mat4 &src) const noexcept {
+  return (
+      rows_[0] == src.get_row(0) &&
+      rows_[1] == src.get_row(1) &&
+      rows_[2] == src.get_row(2) &&
+      rows_[3] == src.get_row(3));
+}
+
+bool cglm::Mat4::operator!=(const Mat4 &src) const noexcept {
+  return !(
+      rows_[0] == src.get_row(0) &&
+      rows_[1] == src.get_row(1) &&
+      rows_[2] == src.get_row(2) &&
+      rows_[3] == src.get_row(3));
+}
