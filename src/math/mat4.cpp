@@ -151,3 +151,10 @@ vec_type cglm::Mat4::operator*(const vec_type &vec) const {
           rows_[2] * vec,
           rows_[3] * vec};
 }
+
+Mat4 cglm::Mat4::GetTransposed() const {
+  return {get_col(0),
+          get_col(1),
+          get_col(2),
+          get_col(3)};
+}

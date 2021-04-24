@@ -911,3 +911,17 @@ TEST_CASE("Mat4 vector multiplication") {
   REQUIRE(vec.z == glm_vec.z);
   REQUIRE(vec.w == glm_vec.w);
 }
+
+TEST_CASE("Mat4 transposed") {
+  Mat4 mat({10, 10, 10, 10},
+           {20, 20, 5, 2},
+           {30, 3, 30, 30},
+           {1, 10, 5, 3});
+
+  mat = mat.GetTransposed();
+
+  REQUIRE(mat[0] == Vec4(10, 20, 30, 1));
+  REQUIRE(mat[1] == Vec4(10, 20, 3, 10));
+  REQUIRE(mat[2] == Vec4(10, 5, 30, 5));
+  REQUIRE(mat[3] == Vec4(10, 2, 30, 3));
+}

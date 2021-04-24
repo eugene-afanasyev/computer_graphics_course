@@ -38,6 +38,9 @@ class Mat4 {
 
   vec_type operator*(const vec_type &) const;
 
+  // -- Matrix transformations --
+  Mat4 GetTransposed() const;
+
  private:
   vec_array rows_;
 };
