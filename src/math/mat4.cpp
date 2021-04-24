@@ -144,3 +144,10 @@ Mat4 cglm::Mat4::operator-(float val) const {
 
   return {row0, row1, row2, row3};
 }
+
+vec_type cglm::Mat4::operator*(const vec_type &vec) const {
+  return {rows_[0] * vec,
+          rows_[1] * vec,
+          rows_[2] * vec,
+          rows_[3] * vec};
+}

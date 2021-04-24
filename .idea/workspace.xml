@@ -15,10 +15,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="Mat4 number addition operator defined and covered in tests">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="Mat4 number subtraction operator defined and covered in tests">
       <change beforePath="$PROJECT_DIR$/src/math/mat4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat4.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math/mat4.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat4.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mat_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,14 +144,7 @@
       <workItem from="1618326766735" duration="1103000" />
       <workItem from="1618892134787" duration="160000" />
       <workItem from="1619168081635" duration="5650000" />
-      <workItem from="1619243748994" duration="665000" />
-    </task>
-    <task id="LOCAL-00033" summary="Mat2 sum implemented and covered with tests">
-      <created>1616726066674</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1616726066674</updated>
+      <workItem from="1619243748994" duration="984000" />
     </task>
     <task id="LOCAL-00034" summary="Mat2 indexing subscript operator implemented and covered with tests">
       <created>1616726398302</created>
@@ -489,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619172387420</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Mat4 number subtraction operator defined and covered in tests">
+      <created>1619245780779</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1619245780780</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +508,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mat3 scalar multiplication defined" />
     <MESSAGE value="Mat3 multiplication on a num test coverage" />
     <MESSAGE value="Mat3 division on a num definition and test coverage" />
     <MESSAGE value="Mat::operator+(float) definition and test coverage" />
@@ -533,7 +532,8 @@
     <MESSAGE value="Mat4 multiplication on a number defined and covered in tests" />
     <MESSAGE value="Mat4 division by number defined and covered in tests" />
     <MESSAGE value="Mat4 number addition operator defined and covered in tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat4 number addition operator defined and covered in tests" />
+    <MESSAGE value="Mat4 number subtraction operator defined and covered in tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat4 number subtraction operator defined and covered in tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

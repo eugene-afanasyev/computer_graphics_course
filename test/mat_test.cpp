@@ -889,3 +889,25 @@ TEST_CASE("Mat4 subtraction by number") {
   REQUIRE(mat[3].z == glm_mat[2].w);
   REQUIRE(mat[3].w == glm_mat[3].w);
 }
+
+TEST_CASE("Mat4 vector multiplication") {
+  Mat4 mat({10, 10, 10, 10},
+           {20, 20, 20, 20},
+           {30, 30, 30, 30},
+           {10, 10, 10, 10});
+  Vec4 vec(12, 31, 44, 5);
+
+  glm::mat4 glm_mat({10, 20, 30, 10},
+                    {10, 20, 30, 10},
+                    {10, 20, 30, 10},
+                    {10, 20, 30, 10});
+  glm::vec4 glm_vec(12, 31, 44, 5);
+
+  vec = mat * vec;
+  glm_vec = glm_mat * glm_vec;
+
+  REQUIRE(vec.x == glm_vec.x);
+  REQUIRE(vec.y == glm_vec.y);
+  REQUIRE(vec.z == glm_vec.z);
+  REQUIRE(vec.w == glm_vec.w);
+}
