@@ -131,3 +131,16 @@ Mat4 cglm::Mat4::operator+(float val) const {
 
   return {row0, row1, row2, row3};
 }
+
+Mat4 cglm::Mat4::operator-(float val) const {
+  vec_type row0(rows_[0].x - val, rows_[0].y - val,
+                rows_[0].z - val, rows_[0].w - val);
+  vec_type row1(rows_[1].x - val, rows_[1].y - val,
+                rows_[1].z - val, rows_[1].w - val);
+  vec_type row2(rows_[2].x - val, rows_[2].y - val,
+                rows_[2].z - val, rows_[2].w - val);
+  vec_type row3(rows_[3].x - val, rows_[3].y - val,
+                rows_[3].z - val, rows_[3].w - val);
+
+  return {row0, row1, row2, row3};
+}
