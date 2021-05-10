@@ -15,10 +15,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="Mat4 translation method defined">
+    <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="Mat4 translation test coverage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mat_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/mat4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat4.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/mat4.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/mat4.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,14 +147,7 @@
       <workItem from="1619243748994" duration="5096000" />
       <workItem from="1619319055074" duration="13000" />
       <workItem from="1619330890895" duration="37000" />
-      <workItem from="1620642806686" duration="1925000" />
-    </task>
-    <task id="LOCAL-00039" summary="Mat2 multiplication on a num implemented and covered with tests">
-      <created>1616769544968</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1616769544968</updated>
+      <workItem from="1620642806686" duration="3319000" />
     </task>
     <task id="LOCAL-00040" summary="Mat2 division on a num implemented and covered with tests">
       <created>1616769944859</created>
@@ -492,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620644028852</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Mat4 translation test coverage">
+      <created>1620644998121</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1620644998121</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +511,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mat3 multiplication on a vector definition and test coverage" />
     <MESSAGE value="cglm::Mat2 determinant method defined" />
     <MESSAGE value="cglm::Mat3 inverse matrix method defined and covered in tests" />
     <MESSAGE value="cglm::Mat3 transposed matrix method defined and covered in tests" />
@@ -536,7 +535,8 @@
     <MESSAGE value="Mat4 inverse matrix defined and covered in tests" />
     <MESSAGE value="Mat4 comparison operations defined and covered in tests" />
     <MESSAGE value="Mat4 translation method defined" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat4 translation method defined" />
+    <MESSAGE value="Mat4 translation test coverage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat4 translation test coverage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

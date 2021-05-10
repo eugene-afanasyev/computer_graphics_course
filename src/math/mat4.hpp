@@ -43,6 +43,7 @@ class Mat4 {
   Mat4 GetTransposed() const;
   Mat4 GetInverse() const;
   Mat4 Translate(const Vec3&) const;
+  Mat4 Rotate(float degrees, const Vec3& axis_vec) const;
 
   // -- Comparison methods --
   bool operator==(const Mat4 &) const noexcept;

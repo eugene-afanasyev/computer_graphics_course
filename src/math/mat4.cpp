@@ -1,6 +1,7 @@
 #include "mat4.hpp"
 #include "exception.hpp"
 #include "utils.hpp"
+#include <math.h>
 
 using vec_type = cglm::Vec4;
 using Mat4 = cglm::Mat4;
@@ -317,4 +318,36 @@ Mat4 cglm::Mat4::Translate(const cglm::Vec3 &src) const {
   row2.w = src.z;
 
   return {row0, row1, row2, rows_[3]};
+}
+
+Mat4 cglm::Mat4::Rotate(float degrees, const cglm::Vec3 &axis_vec) const {
+  float radians = (degrees * (float)M_PI) / 180.0f;
+
+  vec_type row0(rows_[0]);
+  vec_type row1(rows_[1]);
+  vec_type row2(rows_[2]);
+  vec_type row3(rows_[3]);
+
+  if (axis_vec.x != 0) {
+    row1.x = cos(radians);
+    row1.y = -sin(radians);
+    row2.x = sin(radians);
+    row2.y = cos(radians);
+  }
+
+  if (axis_vec.y != 0) {
+    row0.x = cos(radians);
+    row0.z = sin(radians);
+    row2.x = -sin(radians);
+    row2.z = cos(radians);
+  }
+
+  if (axis_vec.z != 0) {
+    row0.x = cos(radians);
+    row0.y = -sin(radians);
+    row1.x = sin(radians);
+    row1.y = cos(radians);
+  }
+
+  return {row0, row1, row2, row3};
 }
