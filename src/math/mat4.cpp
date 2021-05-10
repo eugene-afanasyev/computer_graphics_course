@@ -307,3 +307,14 @@ bool cglm::Mat4::operator!=(const Mat4 &src) const noexcept {
       rows_[2] == src.get_row(2) &&
       rows_[3] == src.get_row(3));
 }
+
+Mat4 cglm::Mat4::Translate(const cglm::Vec3 &src) const {
+  vec_type row0(rows_[0]);
+  row0.w = src.x;
+  vec_type row1(rows_[1]);
+  row1.w = src.y;
+  vec_type row2(rows_[2]);
+  row2.w = src.z;
+
+  return {row0, row1, row2, rows_[3]};
+}

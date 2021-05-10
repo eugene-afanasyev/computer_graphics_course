@@ -3,6 +3,7 @@
 
 #include <array>
 #include "vec4.hpp"
+#include "vec3.hpp"
 
 namespace cglm {
 
@@ -41,6 +42,7 @@ class Mat4 {
   // -- Matrix transformations --
   Mat4 GetTransposed() const;
   Mat4 GetInverse() const;
+  Mat4 Translate(const Vec3&) const;
 
   // -- Comparison methods --
   bool operator==(const Mat4 &) const noexcept;
