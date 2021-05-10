@@ -1,5 +1,1 @@
-#include "ex.h"
-
-int main() {
-
-}
+int main() { }

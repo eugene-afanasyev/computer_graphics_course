@@ -3,6 +3,7 @@
 #include <glm/mat2x2.hpp>
 #include <glm/mat3x3.hpp>
 #include <glm/mat4x4.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 #include <glm/ext/vector_int1.hpp>
 #include <glm/ext/scalar_common.hpp>
 #include <iostream>
@@ -983,4 +984,21 @@ TEST_CASE("Mat4 comparison methods") {
 
     REQUIRE(mat0 == mat1);
   }
+}
+
+TEST_CASE("Mat4 translation") {
+  Vec4 vec(1.0f, 0.0f, 0.0f, 1.0f);
+  Mat4 trans(1.0f);
+  trans = trans.Translate(Vec3(1.0f, 1.0f, 0.0f));
+  vec = trans * vec;
+
+  glm::vec4 glm_vec(1.0f, 0.0f, 0.0f, 1.0f);
+  glm::mat4 glm_trans = glm::mat4(1.0f);
+  glm_trans = glm::translate(glm_trans, glm::vec3(1.0f, 1.0f, 0.0f));
+  glm_vec = glm_trans * glm_vec;
+
+  REQUIRE(vec.x == glm_vec.x);
+  REQUIRE(vec.y == glm_vec.y);
+  REQUIRE(vec.z == glm_vec.z);
+  REQUIRE(vec.w == glm_vec.w);
 }
