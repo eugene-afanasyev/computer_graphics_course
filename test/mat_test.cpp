@@ -1002,3 +1002,28 @@ TEST_CASE("Mat4 translation") {
   REQUIRE(vec.z == glm_vec.z);
   REQUIRE(vec.w == glm_vec.w);
 }
+
+TEST_CASE("Mat4 rotate") {
+  Mat4 mat(1.0f);
+  mat = mat.Rotate(90, {0.0, 0.0, 0.1});
+
+  glm::mat4 glm_mat = glm::mat4(1.0f);
+  glm_mat = glm::rotate(glm_mat, glm::radians(90.0f), glm::vec3(0.0, 0.0, 1.0));
+
+  REQUIRE(floatCmp(mat[0].x, glm_mat[0].x));
+  REQUIRE(floatCmp(mat[0].y, glm_mat[1].x));
+  REQUIRE(floatCmp(mat[0].z, glm_mat[2].x));
+  REQUIRE(floatCmp(mat[0].w, glm_mat[3].x));
+  REQUIRE(floatCmp(mat[1].x, glm_mat[0].y));
+  REQUIRE(floatCmp(mat[1].y, glm_mat[1].y));
+  REQUIRE(floatCmp(mat[1].z, glm_mat[2].y));
+  REQUIRE(floatCmp(mat[1].w, glm_mat[3].y));
+  REQUIRE(floatCmp(mat[2].x, glm_mat[0].z));
+  REQUIRE(floatCmp(mat[2].y, glm_mat[1].z));
+  REQUIRE(floatCmp(mat[2].z, glm_mat[2].z));
+  REQUIRE(floatCmp(mat[2].w, glm_mat[3].z));
+  REQUIRE(floatCmp(mat[3].x, glm_mat[0].w));
+  REQUIRE(floatCmp(mat[3].y, glm_mat[1].w));
+  REQUIRE(floatCmp(mat[3].z, glm_mat[2].w));
+  REQUIRE(floatCmp(mat[3].w, glm_mat[3].w));
+}
