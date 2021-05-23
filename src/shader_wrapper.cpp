@@ -58,6 +58,16 @@ void ShaderWrapper::Use() const {
   glUseProgram(id_);
 }
 
+void ShaderWrapper::SetBool(const std::string &name, bool value) const {
+  glUniform1i(glGetUniformLocation(id_, name.c_str()), (int)value);
+}
+void ShaderWrapper::SetInt(const std::string &name, int value) const {
+  glUniform1i(glGetUniformLocation(id_, name.c_str()), value);
+}
+void ShaderWrapper::SetFloat(const std::string &name, float value) const {
+  glUniform1i(glGetUniformLocation(id_, name.c_str()), value);
+}
+
 void ShaderWrapper::CheckShaderCompileErrors_(GLuint shader_id, const std::string &type) const {
   int success;
   char info_log[1024];

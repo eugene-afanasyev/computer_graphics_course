@@ -15,12 +15,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="Mat4 rotation test coverage">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/shaders/e2.fs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/shaders/e2.vs" beforeDir="false" />
+    <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="Defined ShaderWrapper class">
       <change beforePath="$PROJECT_DIR$/src/shader_wrapper.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/shader_wrapper.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shader_wrapper.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/shader_wrapper.h" afterDir="false" />
     </list>
@@ -149,21 +144,7 @@
       <workItem from="1620642806686" duration="4891000" />
       <workItem from="1621694831992" duration="822000" />
       <workItem from="1621695762764" duration="4544000" />
-      <workItem from="1621760589324" duration="5160000" />
-    </task>
-    <task id="LOCAL-00042" summary="Mat2 multiplication on a Vec2 implemented and covered with tests">
-      <created>1616938173306</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1616938173306</updated>
-    </task>
-    <task id="LOCAL-00043" summary="defined NoInverseMatrixException">
-      <created>1616939081549</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1616939081549</updated>
+      <workItem from="1621760589324" duration="5343000" />
     </task>
     <task id="LOCAL-00044" summary="Mat2 GetInverse method defined">
       <created>1616939940232</created>
@@ -494,7 +475,21 @@
       <option name="project" value="LOCAL" />
       <updated>1621695495318</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="removed shaderLoader, e2 shaders">
+      <created>1621784235946</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1621784235946</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Defined ShaderWrapper class">
+      <created>1621784264066</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1621784264066</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,8 +508,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cglm::Mat3 transposed matrix method defined and covered in tests" />
-    <MESSAGE value="cglm::Mat3 comparison methods defined and covered in tests" />
     <MESSAGE value="Mat4 constructors and accessors declaration" />
     <MESSAGE value="Mat4 constructors definition" />
     <MESSAGE value="Mat4 accessors defined" />
@@ -538,7 +531,9 @@
     <MESSAGE value="Mat4 translation test coverage" />
     <MESSAGE value="Mat4 rotation defined" />
     <MESSAGE value="Mat4 rotation test coverage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat4 rotation test coverage" />
+    <MESSAGE value="removed shaderLoader, e2 shaders" />
+    <MESSAGE value="Defined ShaderWrapper class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Defined ShaderWrapper class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
