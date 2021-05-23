@@ -18,7 +18,7 @@ endif()
 
 add_executable(computer_graphics_course main.cpp 3rd/stb/stb_image.h 3rd/stb/stb_image.cpp utils/shaderLoader.h
         utils/shaderLoader.cpp src/shader_wrapper.cpp src/shader_wrapper.h src/math/vec2.cpp src/math/vec2.hpp src/math/vec3.cpp src/math/vec3.hpp src/math/vec4.cpp src/math/vec4.hpp src/math/mat2.cpp src/math/mat2.hpp
-        src/math/utils.hpp test/mat_test.cpp src/math/exception.cpp src/math/exception.hpp src/math/mat3.cpp src/math/mat3.hpp src/math/mat4.cpp src/math/mat4.hpp)
+        src/math/utils.hpp src/math/exception.cpp src/math/exception.hpp src/math/mat3.cpp src/math/mat3.hpp src/math/mat4.cpp src/math/mat4.hpp)
 
 target_link_libraries(computer_graphics_course sfml-graphics sfml-audio GL GLEW)
 

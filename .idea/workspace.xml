@@ -15,9 +15,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="Mat4 rotation defined">
+    <list default="true" id="de57e0e7-5a91-4d72-b53c-dff5344358fa" name="Default Changelist" comment="Mat4 rotation test coverage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mat_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/mat_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/shaders/e2.fs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/shaders/e2.vs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shader_wrapper.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/shader_wrapper.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shader_wrapper.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/shader_wrapper.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +32,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-Coverage" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -80,11 +85,6 @@
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="computer_graphics_course" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="computer_graphics_course" TARGET_NAME="computer_graphics_course" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="computer_graphics_course" RUN_TARGET_NAME="computer_graphics_course">
@@ -147,14 +147,9 @@
       <workItem from="1619319055074" duration="13000" />
       <workItem from="1619330890895" duration="37000" />
       <workItem from="1620642806686" duration="4891000" />
-      <workItem from="1621694831992" duration="388000" />
-    </task>
-    <task id="LOCAL-00041" summary="Mat2 sum and subtraction on a number implemented and covered with tests">
-      <created>1616771755100</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1616771755100</updated>
+      <workItem from="1621694831992" duration="822000" />
+      <workItem from="1621695762764" duration="4544000" />
+      <workItem from="1621760589324" duration="5160000" />
     </task>
     <task id="LOCAL-00042" summary="Mat2 multiplication on a Vec2 implemented and covered with tests">
       <created>1616938173306</created>
@@ -492,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620646482702</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="Mat4 rotation test coverage">
+      <created>1621695495317</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1621695495318</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +513,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cglm::Mat3 inverse matrix method defined and covered in tests" />
     <MESSAGE value="cglm::Mat3 transposed matrix method defined and covered in tests" />
     <MESSAGE value="cglm::Mat3 comparison methods defined and covered in tests" />
     <MESSAGE value="Mat4 constructors and accessors declaration" />
@@ -536,14 +537,15 @@
     <MESSAGE value="Mat4 translation method defined" />
     <MESSAGE value="Mat4 translation test coverage" />
     <MESSAGE value="Mat4 rotation defined" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mat4 rotation defined" />
+    <MESSAGE value="Mat4 rotation test coverage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mat4 rotation test coverage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/test/mat_test.cpp</url>
-          <line>1009</line>
+          <line>1029</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
